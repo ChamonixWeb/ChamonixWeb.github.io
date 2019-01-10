@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300" rel="stylesheet">
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+
+    <title>夏慕尼 : 新香榭鐵板燒</title>
+
+    <style>
+        body {
+
+            margin: 0;
+            background-color: rgb(0, 0, 0);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+            overflow-y: hidden;
+
+
+        }
+
+        #bgimg {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("bodyBackground/bodybgimg.jpg");
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        #mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.644);
+
+        }
+
+        /* NAVBAR */
+        #navbar {
+            padding-top: 99px;
+            font-size: 18px;
+            color: #F4E7B4;
+            letter-spacing: 3px;
+
+        }
+
+        #navbar.hidden {
+            display: none;
+        }
+
+        #product {
+
+            text-align: center;
+        }
+
+        #news {
+
+            text-align: center;
+        }
+
+
+        #logoBox {
+            margin: auto;
+            height: 84px;
+            width: 84px;
+        }
+
+        #logoBox img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #about {
+            text-align: center;
+
+        }
+
+        #place {
+            text-align: center;
+
+        }
+
+        #section1 {
+            position: fixed;
+            left: 50%;
+            top: calc(50% + 50px);
+            /* 調回自身50%的寬度 */
+            transform: translate(-50%, -50%);
+        }
+
+        #section1.hidden {
+            display: none;
+        }
+
+
+
+        /* 主標題區 */
+        #mainText {
+
+            text-align: center;
+            /* padding-top: 260px; */
+            font-size: 36px;
+            color: #E0D3B6;
+            letter-spacing: 15px;
+            /* 縮排 */
+            text-indent: 15px;
+
+        }
+
+        #storeName {
+            font-size: 23px;
+        }
+
+        /* 透明漸變 - color - transparent */
+
+        hr.style-two {
+            position: relative;
+            z-index: 6;
+            border: 0;
+            height: 1px;
+            color: rgb(224, 211, 182);
+            width: 180px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+
+        }
+
+
+        /* 副標題 */
+        #subText {
+            margin-top: 36px;
+            text-align: center;
+            font-size: 14px;
+            color: #E0D3B6;
+            letter-spacing: 3px;
+        }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            font-size: 18px;
+            color: #E0D3B6;
+            position: fixed;
+            left: 50%;
+            /* 調回自身50%的寬度 */
+            transform: translate(-50%, -50%);
+            bottom: -50px;
+        }
+
+        footer.hidden {
+            display: none;
+        }
+
+        #bottomline {
+            width: 1px;
+            height: 58.5px;
+            background-color: #E0D3B6;
+            margin: 18px auto;
+            z-index: 2;
+
+            /* 漸層出現動畫 */
+            background: linear-gradient(#b9af96 10%, transparent);
+            -webkit-transform-origin: center top;
+            transform-origin: center top;
+            -webkit-animation: blingbling 2.5s linear infinite;
+            animation: blingbling 2.5s linear infinite;
+        }
+
+
+
+        @keyframes blingbling {
+            0% {
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+                opacity: 0;
+            }
+
+            25% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: 1;
+            }
+
+            75% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: .5;
+            }
+
+            100% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: 0;
+            }
+        }
+
+
+
+
+
+
+        /* 隱藏的版面 滑鼠下滾後出現 上滾時還原原版*/
+        #btn {
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.6);
+
+
+        }
+
+        #btn.show {
+            z-index: 99;
+            bottom: 0px;
+            transition: 0.3s;
+        }
+
+        /* 讓消失時也有做緩慢移動 */
+        #btn.hide {
+            z-index: 99;
+            bottom: -600px;
+            transition: 0.3s;
+        }
+
+        #btnInfo {
+            color: #E0D3B6;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        #btnOption {
+            color: #E0D3B6;
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+
+        #btnOption .box {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #E0D3B6;
+            box-sizing: border-box;
+            padding-top: 44px;
+            padding-bottom: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #btnOption .box p {
+            text-align: left;
+            margin: 0;
+        }
+
+        .boxContant {
+            margin: 0;
+            color: #E0D3B6;
+            height: 100%;
+            width: 100%;
+            border: 1px solid #E0D3B6;
+        }
+
+
+        /* 跳出有X的中間方塊 */
+        .HIDboxContant1 {
+            border: 1px solid #E0D3B6;
+            display: none;
+
+            color: #E0D3B6;
+        }
+
+        .HIDboxContant2 {
+            padding: 5% 10%;
+            font-size: 20px;
+            letter-spacing: 2px;
+
+        }
+
+        #closeIcon {
+            height: 100%;
+            width: 100%;
+        }
+
+        #closeBox {
+            height: 100%;
+            width: 30px;
+            padding-top: 20px;
+            padding-left: 94%;
+
+        }
+
+        .close1 {
+
+            width: 32px;
+            height: 2px;
+            background-color: #E0D3B6;
+            transform: rotate(45deg) translateY(1px);
+        }
+
+        .close2 {
+            width: 32px;
+            height: 2px;
+            background-color: #E0D3B6;
+            transform: rotate(135deg) translateY(2px);
+        }
+
+        /* 跳出有X的中間方塊----出現&消失 */
+
+        .HIDboxContant1.show {
+            z-index: 99;
+            display: none;
+            transition: 0.3s;
+        }
+
+        .HIDboxContant1.hide {
+            z-index: 99;
+            display: block;
+            transition: 0.3s;
+            margin-top: 24%;
+        }
+    </style>
+</head>
+
+<!--   ------------------     我是body區塊     -----------------------      -->
+
+<body>
+
+
+
+    <!-- 隱藏的版面 -->
+    <div id="btn" class="hide">
+        <div class="container-fluid">
+            <!-- no-gutters刪除 -->
+            <div id="btnOption" class="row no-gutters">
+
+
+                <div class="col-md-4">
+
+                    <div class="row">
+                        <div id="A" class="col">
+                            <div class="box">
+                                EZTABLE
+                                <br>
+                                線上訂位
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">
+                                瘋美食APP
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="info">
+                            <p>營業時間</p>
+                            <div>
+                                <p>11:30 - 14:30 (最後用餐時間14:00) </p>
+                                <p>17:30 - 22:00 (最後用餐時間21:00)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">
+                                <br>
+                                FB粉絲團
+                                <br>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="box">
+                                聯絡我們
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="btnInfo" class="row">
+                <div class="col">
+                    <span>本網站僅為學術用途，如有侵權請來信告知SMN@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 遮罩效果 -->
+
+    <!-- 放圖DIV -->
+    <div id="bgimg">
+        <!-- 黑色半透明 -->
+        <div id="mask"></div>
+    </div>
+
+    <!-- navbar -->
+    <div class="container-fluid">
+        <div id="navbar" class="row">
+            <div class="col-md-1"></div>
+            <div id="product" class="col-md-1 align-self-center">先嚐嚐鮮</div>
+            <div id="news" class="col-md-1 align-self-center">最新消息</div>
+            <div id="logo" class="col">
+                <div id="logoBox" class="">
+                    <img src="logo.png" alt="" class="rounded-circle">
+                </div>
+            </div>
+            <div id="about" class="col-md-1 align-self-center">關於夏慕尼</div>
+            <div id="place" class="col-md-1 align-self-center">據點查詢</div>
+            <div class="col-md-1"></div>
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col"></div>
+            <div class="col">
+
+                <div class="HIDboxContant1 animated fadeInUp faster ">
+                    <!-- close icon-->
+                    <div id="closeIcon">
+                        <div id="closeBox">
+                            <div class="close1"></div>
+                            <div class="close2"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="HIDboxContant2">
+                        <p>如果您有任何意見，歡迎與我們聯絡 :</p>
+                        <p>
+                            免付費意見專線 : 0800-365-101(訂位請撥各店電話)
+                            <br>服務信箱 : service@chamonix.com.tw
+                            <br>服務時間 : 平日週一至週五10:00~19:00
+                        </p>
+
+                        <p>
+                            如果您有禮贈品供應，異業優惠合作等，歡迎聯絡
+                            <br>email : marketing@chamonix.com.tw
+                        </p>
+
+                        <p>
+                            如果您有食材/非食材訊息提供，歡迎聯絡
+                            <br>email : purchase@wowprime.com
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <!-- centerText -->
+    <div id="section1">
+
+        <div class="container">
+
+
+            <!-- mainText -->
+            <div id="mainText" class="row">
+                <div class="col-md-12 ">
+                    <p>拉近愛的距離</p>
+                </div>
+                <div class="col-md-12">
+                    <p id="storeName">夏慕尼</p>
+                </div>
+            </div>
+
+            <!-- 裝飾線 -->
+            <div class="row">
+                <hr class="style-two">
+            </div>
+
+
+            <!-- subText -->
+            <div id="subText" class="row">
+                <div class="col-md-12">
+                    <p>
+                        顛覆傳統鐵板燒餐廳的老式印象，
+                        <br>
+                        創新結合法式料理的細膩與 lounge bar設計風格，
+                        <br>
+                        營造出時尚品店般的用餐氣氛。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">頁尾</div>
+                <div id="bottomline" class="blingbling"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS載入 -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script>
+        window.addEventListener('wheel', function (e) {
+            // 滑鼠上滾
+            if (e.deltaY < 0) {
+                console.log('scrolling up');
+                document.getElementById('section1').classList.remove("hidden");
+                document.getElementById('navbar').classList.remove("hidden");
+                document.querySelector('footer').classList.remove("hidden");
+
+                // footer區塊
+                document.getElementById('btn').classList.remove("show");
+                document.getElementById('btn').classList.add("hide");
+
+                // 中間有關閉圖式的區塊
+                document.querySelector('.HIDboxContant1').classList.remove("hide");
+                document.querySelector('.HIDboxContant1').classList.add("show");
+
+
+                // document.getElementById('status').innerHTML = 'scrolling up';
+            }
+
+            // 滑鼠下滾
+            if (e.deltaY > 0) {
+                console.log('scrolling down');
+                document.getElementById('section1').classList.add("hidden");
+                document.getElementById('navbar').classList.add("hidden");
+                document.querySelector('footer').classList.add("hidden");
+
+                // footer區塊
+                document.getElementById('btn').classList.add("show");
+                document.getElementById('btn').classList.remove("hide");
+
+
+                // 中間有關閉圖式的區塊
+                document.querySelector('.HIDboxContant1').classList.add("hide");
+                document.querySelector('.HIDboxContant1').classList.remove("show");
+
+                // document.getElementById('status').innerHTML = 'scrolling down';
+            }
+        });
+    </script>
+</body>
+
+</html>
