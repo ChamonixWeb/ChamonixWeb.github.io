@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 每次載入需填寫版本 4.4.6 (找最新版) -->
+    <!-- Swiper/4.4.1 解決輪播順序問題 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+
+
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #070F23;
+        }
+
+        .container.custom-container-width {
+            max-width: 1170px;
+            padding: 0;
+        }
+        a:link {
+            color:#F4E7B4;
+            text-decoration: none;
+        }
+
+　
+
+        /* Navbar------------------------------------------- */
+        .myNavbar{
+            position: absolute;
+            z-index: 999;
+        }
+        .navbar-brand{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .navbar{
+            padding: 1% 0;
+        }
+        .navbar-light .navbar-nav .nav-link { 
+            color:rgba(244, 231, 180, 0.7);
+        }
+       
+        @media (min-width: 992px){
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 40px;
+        }
+    }
+        /* 右邊item對齊container邊界 */
+        .navbar-expand-lg  .ml-auto  .nav-item:nth-child(2) a {
+            padding-right: 0px;
+        }
+        /* 左邊item對齊container邊界 */
+            .navbar-expand-lg  .mr-auto  .nav-item:first-child a {
+            padding-left: 0px;
+        }
+        #navbarSupportedContent .nav-item a:hover{
+            color:#F4E7B4;
+        }
+        .changeBGcolor{
+            background-color: #0A1532; 
+        }
+
+
+        /* banner----------------------------------------- */
+        
+        .banner{
+            width: 100%;
+            height: 72vh;
+            margin-top: 59px;
+            background-image: url('IMG/announcementBanner.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .bannerText{
+            width: 100%;
+            text-align: center;
+            color: #E0D3B6;
+            padding: 3.1% 0;
+        }
+        .bannerText p{
+           font-size: 19px;
+           line-height: 35px;
+           letter-spacing: 4px;
+           text-indent: 4px;
+        }
+
+        /* swiper------------------------------ */
+        .section1{
+             margin-top: 8%;
+             position: relative;   
+        }
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            height: 200px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-button-next {
+            right: 10%;
+            background-image: none;
+            font-size: 50px;
+            color: #E0D3B6;
+        }
+
+        .swiper-button-prev {
+            left: 10%;
+            background-image: none;
+            font-size: 50px;
+            color: #E0D3B6;
+        }
+
+        .swiper-pagination {
+            top: 110%;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            margin: 0 15px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            background: #E0D3B6;
+
+        }
+        .swiper-slide img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        /* 加濾鏡:模糊效果 */
+        .swiper-slide:hover img{
+            filter:blur(4px);
+            cursor: pointer;  
+        }
+       
+        .readMore{
+            position: absolute;
+            z-index: 2;
+            color: #F4E7B4;
+            font-size: 20px;
+            font-weight: 600;
+            display: none;
+             
+        }
+        .readMore.active{
+            display: block;
+        }
+        .readMore:hover{
+            cursor: pointer; 
+        }
+        /* footer   -------------------------------------- */
+        .footer{
+            margin-top: 150px;
+            color: #F4E7B4;
+            letter-spacing: 4px;
+            /* 縮排 */
+            text-indent: 4px;
+        }
+        .footer .row .col{
+            text-align:  center;
+            letter-spacing: 3px;
+            /* 縮排 */
+            text-indent: 3px;
+        }
+
+        .footer_info .col-md-2{
+            border: 1px solid #F4E7B4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top :20px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .footer_info .col-md-4{
+            border: 1px solid #F4E7B4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top :20px;
+            padding-bottom: 20px;
+        }
+       
+        .openTime p{
+            text-align: center;
+        }
+        .emailBox{
+            margin-top: 10px;
+        }
+        .textBox p:first-child{
+            text-align: left;
+        }
+
+
+
+
+        /* 聯絡我們折疊------------------------------- */
+        .section888{
+            width: 100%;
+            height: 280px;
+            color: #F4E7B4;
+            background-color: #1A1A1A;
+            border-radius: 15px;
+            border: 1px solid;
+            position: fixed;
+            bottom:50px;
+            z-index: 999;
+            pointer-events: none;
+            display: none;
+        }
+        .boxSh{
+            display: block;
+            pointer-events: auto;
+        }
+        .boxhid{
+            display: none;
+            pointer-events: none;
+        }
+        
+        .section888 .infoBox{
+            float: left;
+            width: 50%;
+            height: 100%;
+            text-align: left;
+            padding-left:27%;
+            padding-top:3%;
+            letter-spacing: 4px;
+
+        }
+        .section888 .infoBox2{
+            float: left;
+            width: 50%;
+            height: 100%;
+            text-align: left;
+            padding-left:2%;
+            padding-top:3%;
+        }
+        .infoBox p:first-child {
+            letter-spacing: 3.7px;
+        }
+        .A{
+            letter-spacing: 4.7px;
+        }
+        .closebtn{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .box666{
+            position: relative;
+        }
+        
+        /* 右邊資訊---------------------------- */
+
+        .infoBox2 p span:first-child {
+            letter-spacing: 7.8px;
+        }
+        .infoBox2 p span:last-child {
+            letter-spacing: 4.5px;
+        }
+        .infoBox2 .mailText span:last-child {
+            letter-spacing: 6.1px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .section2{
+            margin-top: 10%;
+        }
+        .navbar-light .navbar-toggler-icon {
+            background-image: url('IMG/Group1.png');
+        }
+        .navbar-toggler:not(:disabled):not(.disabled) {
+            border: none;
+            position: fixed;
+            top: 30px;
+            right: 10px;
+        }
+        .logobox{
+            width: 60px;
+            height: 60px;
+            background-image: url("IMG/logo.png");
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        .navbar_blue{
+            width: 100%;
+            height: 12vh;
+            background-color: #0A1532;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+        }
+        .phoneText{
+            float: left;
+            color: white;
+            padding: 0 2%;
+            margin-top: 40%;
+            display: none;
+        }
+        .phoneboxText{
+            text-align: center;
+        }
+        hr.style-two {
+            position: relative;
+            z-index: 0;
+            border: 0;
+            height: 1px;
+            color: rgb(224, 211, 182);
+            width: 180px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+
+        }
+        
+        .navbaritem_blue{
+            width: 200px;
+            height: 50px;
+            background-color: #0A1532;
+            position: fixed;
+            z-index: 6;
+            top: 13px;
+            left: 25%;
+        }
+
+        @media (max-width :1024px){
+            .swiper-button-next{
+                display: none;
+            }
+            .swiper-button-prev{
+                display: none;
+            }
+            .section888 .infoBox{
+                padding-left: 3%;
+                padding-top: 7%;
+            }
+            .section888 .infoBox2 {
+                padding-top: 7%;
+                padding-left: 0;
+            }
+            .textBox{
+                order: -1;
+            }
+            .swiper-slide{
+                width: 100%;
+            }
+            .navbaritem_blue{
+                width: 200px;
+                height: 50px;
+                background-color: #0A1532;
+                position: fixed;
+                z-index: 6;
+                top: 13px;
+                left: 25%;
+            }
+            .ml-auto, .mx-auto {
+                margin-right: 5%;
+            }
+            .mr-auto, .mx-auto {
+                margin-left: 5%;
+            }
+        }
+        /* 平板 */
+        @media (max-width :768px){
+            .navbar-collapse {
+                height: 100vh;
+                text-align: center;
+            }
+            .navbar-nav{
+                margin-top: 120px;
+                text-align: center;
+            }
+            .nav-link{
+                padding: 12% 1rem;
+                font-size: 20px;
+                border: 1px solid #E0D3B6; 
+            }
+            .navbaritem_blue{
+                display: none;
+            }
+            .navbar-nav .nav-link {
+                margin-right: 5%;
+            }
+            
+        }
+        /* 手機板 */
+        @media (max-width :415px){
+            .footer .footer_info .col-md-4{
+                order: 1;
+                height: 35vh;
+            }
+            .footer .footer_info .col-md-2{
+                width: 50%;
+                height: 20vh;
+            }
+            .banner {
+                height: 100vh;
+                background-image: url('IMG/chamonixBanner.png');
+                background-size:cover;
+                background-position: center;
+            }
+            .bannerText {
+                display: none;
+            }
+            .navbar-collapse {
+                height: 100vh;
+                text-align: center;
+            }
+            .navbar-nav{
+                margin-top: 120px;
+                text-align: center;
+            }
+            .nav-link{
+                padding: 12% 1rem;
+                font-size: 20px;
+                border: 1px solid #E0D3B6; 
+            }
+            .phoneText {
+                float: left;
+                color: white;
+                padding: 0 2%;
+                margin: 60% 10%;
+                text-align: center;
+                width: 80%;
+                display: block;
+            }
+            .phoneTitle{
+                font-size: 28px;
+                letter-spacing: 7px;
+            }
+            .phoneboxText{
+                text-align: center;
+                font-size: 14px;
+                
+             }
+             .phoneboxText p{
+                font-weight: 200;
+                letter-spacing: 1px;
+             }
+             .navbaritem_blue{
+                 display: none;
+             }
+             .emailBox {
+                 font-size: 10px;
+             }
+           
+            .section888 {
+                height: 76vh;
+            }
+            .section888 .infoBox {
+                width: 100%;
+                font-size: 12px;
+            }
+            .section888 .infoBox2 {
+                width: 100%;
+                font-size: 12px;
+                padding: 12px;
+            }
+            .navbar-light .ml-auto .nav-link{
+                display: none;
+            }
+        }
+
+
+    
+
+        
+           
+        </style>
+
+    <title>夏慕尼 : 新香榭鐵板燒</title>
+</head>
+
+<body>
+
+    <div class="navbar_blue"></div>
+    <div class="navbaritem_blue"></div>
+
+    <!-- Navbar -->
+    <!-- 釘選直接寫在style裡面 -->
+    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-light" style="background-color: #0A1532; position: fixed; width: 100%; top: 0;left: 0; z-index: 2;">
+        <div class="container custom-container-width">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="logobox navbar-brand" href="#"></div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">頂級饗宴</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">夏慕新聞</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">尋覓據點</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">邂逅夏慕</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">尋覓據點</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">邂逅夏慕</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="phoneText">
+        <p class="phoneTitle">夏慕新聞</p>
+        <hr class="style-two">
+        <div class="phoneboxText">
+            <p>法國的夏慕尼(Chamonix)是搭纜車</p>
+            <p>登阿爾卑斯山的起點，</p>
+            <p>我們以之為名，希望從「夏慕尼」開始，</p>
+            <p>再創鐵板燒料理的另一個高峰。</p>
+        </div>
+    </div>
+
+    <div class="banner" id="banner"></div>
+    <div class="bannerText">
+        <p>
+            法國的夏慕尼(Chamonix)是搭纜車登阿爾卑斯山的起點，
+            <br>
+            我們以之為名，希望從「夏慕尼」開始，再創鐵板燒料理的另一個高峰。
+        </p>
+
+    </div>
+
+    <!-- Swiper -->
+
+
+    <!-- Swiper/4.4.1 解決輪播順序問題 -->
+    <div class="section1">
+        <div class="container custom-container-width">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/02.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/03.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/04.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/05.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/06.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/07.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/08.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/09.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/10.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/11.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/12.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/13.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="readMore">read more > </div>
+                        <img class="swiperImg" src="IMG/AD/14.png" alt="">
+                    </div>
+                    
+                   
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+        <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+
+    </div>
+
+    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="50000" class="section888" id="section888">
+        <div class="box666">
+            <div id="closebtn" class="closebtn">x</div>
+
+            <div class="infoBox">
+                <p>如果您有任何意見，歡迎與我們聯絡</p>
+                <p>
+                    <span>免付費意見專線 : 0800-365-101</span>
+                    <br><span>服務信箱 : service@chamonix.com.tw</span>
+                    <br><span class="A">服務時間 : 平日週一至週五10:00~19:00</span>
+                </p>
+                <span class="B">※訂位請撥各店電話</span>
+            </div>
+            <div class="infoBox2">
+                <p>
+                    <span> 禮贈品供應、異業優惠合作等，歡迎聯絡</span>
+                    <br><span> email : marketing@chamonix.com.tw</span>
+                </p>
+                <p class="mailText">
+                    <span> 食材/非食材訊息提供，歡迎聯絡</span>
+                    <br> <span> email : purchase@wowprime.com</span>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row footer_info">
+                <!-- flex-column 橫式轉直，讓第2個span掉下來-->
+                <div class="col-md-2 flex-column" onclick="window.open('http://partner.eztable.com/chamonix')">
+                    <span>EZTABLE</span>
+                    <span>線上訂位</span>
+                </div>
+                <div class="col-md-2" onclick="window.open('http://wowfoods.wowprime.com/front/web/index.do')">
+                    <br>
+                    <span>瘋美食APP</span>
+                    <br>
+                </div>
+                <div class="col-md-4 openTime">
+                    <div class="textBox">
+                        <p>營業時間</p>
+                        <p>11:30 - 14:30 (最後用餐時間14:00) </p>
+                        <p>17:30 - 22:00 (最後用餐時間21:00)</p>
+                    </div>
+
+                </div>
+                <div class="col-md-2" onclick="window.open('https://www.facebook.com/chamonix.com.tw/?eid=ARCT0i-PEQFKyLaMF3fNU_DEMiiuKbLrK0AWjigVxye9zKTG6GGKMEHABIuDizBF--LjRfVU8HqGzre4')">
+                    <br>
+                    <span> FB粉絲團</span>
+                    <br>
+                </div>
+                <!-- <div class="col-md-2" data-toggle="collapse" data-target="#collapseExample"> -->
+                <div id="callme" class="col-md-2" data-target="#section888">
+                    <br>
+                    <!-- <span>聯絡我們</span> -->
+                    <a href="#section888">聯絡我們</a>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row emailBox">
+                <div class="col">
+                    <p>本網站僅為學術用途，如有侵權請來信告知Chamonixweb@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- 載入Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 每次載入需填寫版本 4.4.6 (找最新版) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+
+
+    <script>
+        AOS.init();
+
+        window.addEventListener('wheel', function (e) {
+            // 滑鼠上滾
+            // 往上滑可以直接關閉聯絡我們視窗
+            if (e.deltaY < 0) {
+                $('#section888').addClass('boxhid');
+            }
+
+            // 滑鼠下滾
+            // 往下滾動NAVBAR背景色換色
+            if (e.deltaY > 0) {
+                $(".navbar_blue").addClass('changeBGcolor');
+            }
+        });
+
+
+        // 執行swiper啟動，裡面只要放自己要的功能就好
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 2,
+            slidesPerColumn: 3,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+            slidesPerColumnFill: 'column',
+            autoplay: {
+                delay: 4000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        })
+
+
+
+        //  hover JS---------------------------------------------------------------------
+        // .each(function (index, ele)  >   .each:在相同class底下抓到每一個物件
+        //                                  index:抓到相同class底下的第幾個
+        //                                  ele:抓到index裡面包含那些的元素(ele)
+        $(".swiper-slide").each(function (index, ele) {
+            $(ele).hover(function () {
+
+                //  $(ele).  先選取到該動作的index
+                // .find:抓到該index的某個ele
+
+                $(ele).find(".readMore").addClass("active");
+
+            }, function () {
+                $(ele).find(".readMore").removeClass("active");
+            });
+        });
+
+        $("#callme").click(function () {
+
+            $('#section888').addClass('boxSh');
+            $('#section888').removeClass('boxhid');
+        });
+
+
+        $("#closebtn").click(function () {
+
+            $('#section888').addClass('boxhid');
+            $('#section888').removeClass('boxSh');
+        });
+
+
+
+
+
+
+
+        // 點連結緩慢移到定位
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
