@@ -958,6 +958,8 @@
                     document.querySelector('#phone_btn').classList.remove("show");
                     document.querySelector('#phone_btn').classList.add("hide");
 
+
+
                     // // 中間有關閉圖式的區塊
                     // document.querySelector('.HIDboxContant1').classList.remove("hide");
                     // document.querySelector('.HIDboxContant1').classList.add("show");
@@ -982,6 +984,9 @@
                     document.querySelector('#phone_btn').classList.remove("hide");
 
 
+
+
+
                     // // 中間有關閉圖式的區塊
                     // document.querySelector('.HIDboxContant1').classList.add("hide");
                     // document.querySelector('.HIDboxContant1').classList.remove("show");
@@ -989,6 +994,62 @@
                     // document.getElementById('status').innerHTML = 'scrolling down';
                 }
             });
+
+
+
+
+
+
+            var obj = document.getElementById("phone_btn")
+            //滑動起點與終點
+            var startY = 0;
+            var endY = 0;
+
+
+            //監聽window的觸控事件 
+
+            //touchstart:手指接觸螢幕的瞬間
+            window.addEventListener('touchstart', function (event) {
+
+                var touch = event.targetTouches[0];
+                //紀錄觸控起始點
+                startY = touch.pageY;
+                console.log("起始點:" + startY);
+
+            }, false)
+
+            //touchmove:手指點下去後移動的時候
+            window.addEventListener('touchmove', function (event) {
+
+                var touch = event.targetTouches[0];
+                //紀錄觸控起終點
+                endY = touch.pageY;
+                console.log("滑動距離:" + endY);
+
+            }, false)
+
+            //touchend:手指離開螢幕的瞬間
+            window.addEventListener('touchend', function (event) {
+
+                //終點 - 起點 = 距離   < 10 = 向上滑動如果大於10單位
+                if (endY - startY < 10) {
+
+                    console.log("偵測到向上滑動");
+
+                    //do something
+                    // obj.classList.add("color")
+                    obj.classList.add("show");
+                    obj.classList.remove("hide");
+                } else if (endY - startY > 10) {
+
+                    console.log("偵測到向下滑動");
+
+                    //do something
+                    // obj.classList.remove("color")
+                    obj.classList.remove("show");
+                    obj.classList.add("hide");
+                }
+            }, false)
 
 
         </script>
