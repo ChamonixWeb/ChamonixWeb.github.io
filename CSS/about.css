@@ -392,8 +392,16 @@ hr.style-two {
     background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
 
 }
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../IMG/Group1.png");
+}
+#phoneNavbar{
+    display: none;
+}
+#myNavbar{
+    display: block;
+}
 
-/* 手機板 */
 /* 平板pro */
 @media (max-width :1024px){
     .banner {
@@ -405,6 +413,12 @@ hr.style-two {
 
 /* 手機板 */
 @media (max-width :415px){
+    #phoneNavbar{
+        display: block;
+    }
+    #myNavbar{
+        display:none;
+    }
     .phoneText {
         margin: 60% 10%;
         text-align: center;
@@ -480,7 +494,7 @@ hr.style-two {
         order: 0;
     }
     .left_right_text .imgBox1 {
-        background-position: -1229px;
+        background-position: 87%;
     }
     .soulBox .boxTitle {
         font-size: 18px;
@@ -501,5 +515,25 @@ hr.style-two {
         border-radius: 5px;
         padding: 5px 7px;
     }
+    #phoneNavbar .navbar-collapse {
+        height: 100vh;
+        text-align: center;
+        margin-top: 20%;
+    }
+    .mr-auto{
+        margin-top: 25%;
+        font-size: 25px;
+    }
+    #phoneNavbar .nav-item{
+        padding: 8% 0;
+        border: 1px solid #F4E7B4;
+    } 
+    .navbar-toggler:not(:disabled):not(.disabled) {
+        border: none;
+        position: fixed;
+        top: 20px;
+        right: 5px;
+    }
+   
     
 }

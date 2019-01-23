@@ -1,15 +1,20 @@
 
-// window.addEventListener('wheel', function (e) {
-//     滑鼠上滾
-//     if (e.deltaY < 0) {
-//     }
 
-//     滑鼠下滾
-//     往下滾動NAVBAR背景色換色
-//     if (e.deltaY > 0) {
+// 滑掉直接關閉聯絡我們視窗
+ window.addEventListener('wheel', function (e) {
+    // 滑鼠上滾
+    // 往上滑可以直接關閉聯絡我們視窗
+    if (e.deltaY < 0) {
+        $('#section888').addClass('boxhid');
+    }
 
-//     }
-// });
+    // 滑鼠下滾
+    // 往下滾動NAVBAR背景色換色
+    if (e.deltaY > 0) {
+        $(".navbar_blue").addClass('changeBGcolor');
+    }
+});
+
 
 // 按下分頁，按鈕顏色交換，隱藏另一頁
 
