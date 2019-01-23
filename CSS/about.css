@@ -518,7 +518,6 @@ hr.style-two {
     #phoneNavbar .navbar-collapse {
         height: 100vh;
         text-align: center;
-        margin-top: 20%;
     }
     .mr-auto{
         margin-top: 25%;
@@ -534,6 +533,9 @@ hr.style-two {
         top: 20px;
         right: 5px;
     }
-   
+   .logobox{
+        position: fixed;
+        top: 10px;
+   }
     
 }
