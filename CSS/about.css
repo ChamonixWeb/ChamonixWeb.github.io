@@ -372,3 +372,49 @@ hr.style-two {
     background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
     margin: 30px auto;
 }
+.phoneText{
+    float: left;
+    color: white;
+    padding: 0 2%;
+    margin-top: 40%;
+    display: none;
+}
+.phoneboxText{
+    text-align: center;
+}
+.phoneText hr.style-two {
+    position: relative;
+    z-index: 0;
+    border: 0;
+    height: 1px;
+    color: rgb(224, 211, 182);
+    width: 180px;
+    background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+
+}
+
+
+
+/* 手機板 */
+@media (max-width :415px){
+    .phoneText {
+        margin: 60% 10%;
+        text-align: center;
+        width: 80%;
+        display: block;
+    }
+    .phoneTitle{
+        font-size: 28px;
+        letter-spacing: 7px;
+    }
+    .phoneboxText p{
+        font-weight: 200;
+        letter-spacing: 1px;
+     }
+    .banner {
+        height: 100vh;
+        background-image: url('../IMG/chamonixBanner.png');
+        background-size:cover;
+        background-position: center;
+    }
+}
