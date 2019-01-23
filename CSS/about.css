@@ -191,7 +191,7 @@ a:visited {
 .left_right_text .imgBox1{
     background-image: url('../IMG/About/sevice.png');
     background-size: cover;
-    background-position: -1098px;
+    background-position: 90%;
 }
 .left_right_text .imgBox2{
     background-image: url('../IMG/About/photo.jpg');
@@ -408,7 +408,83 @@ hr.style-two {
         height: 80vh;
         background-image: url('../IMG/chamonixBanner.png');
     }
+    .imgBox {
+        height: 35vh;
+    }
+    .soulBox .section2 .timeLine {
+        height: 30vh;
+    }
+    .welfareBoxbanner {
+        height: 50vh;
+    }
+    .welfareBox .section3 .timeLine {
+        height: 80vh;
+    }
+    .section888 .infoBox {
+        padding-left: 7%;
+    }
+       
 }
+
+/* 平板 */
+@media (max-width :768px){
+
+    /* NAVBAR調整-------------- */
+    #phoneNavbar {
+        display: block;
+    }
+    #myNavbar {
+        display: none;
+    }
+    button{
+        margin-left: auto;
+    }
+    .navbar-collapse {
+        height: 100vh;
+        text-align: center;
+        font-size: 35px;
+    }
+    ul {
+        margin-top: 10%;
+    }
+    #phoneNavbar .nav-item{
+        border: 1px solid #F4E7B4;
+        padding: 7%;
+    }
+    
+    
+    /* 圖文順序 */
+    #post1 .soulBoxtext{
+        order: 1;
+    }
+    #post1 .imgBox1{
+        order: 0;
+    }
+    #post2 .soulBoxtext{
+        order: 1;
+    }
+    #post2 .imgBox1{
+        order: 0;
+    }
+    #post3 .soulBoxtext{
+        order: 1;
+    }
+    #post3 .imgBox1{
+        order: 0;
+    }
+    .soulBoxtext {
+        margin: 10% auto;
+    }
+
+    /* footer聯絡我們視窗 */
+    .section888 .infoBox {
+        padding-top: 7%;
+    }
+    .section888 .infoBox2 {
+        padding-top: 7%;
+    }
+}
+
 
 
 /* 手機板 */
@@ -469,7 +545,7 @@ hr.style-two {
         display: none;
     }
     .soulBoxtext{
-        height: 44vh;
+        padding: 10% 0;
     }
     .imgBox{
         height: 44vh;
@@ -538,4 +614,36 @@ hr.style-two {
         top: 10px;
    }
     
+   /* footer聯絡我們視窗 */
+   .section888 {
+       height: 80vh;
+   }
+   .section888 .infoBox{
+       width: 100%;
+   }
+   .section888 .infoBox2{
+        width: 100%;
+        padding: 7%;
+    }
+    .blueBar{
+        width: 100%;
+        height: 80px;
+        background-color: #0A1532;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* 手機板 */
+@media (max-width :376px){
+    .section1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #tab_Btn .itemsBox{
+       display:block;
+    }
 }
