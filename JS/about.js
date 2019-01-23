@@ -99,7 +99,7 @@ window.addEventListener('touchend', function (event) {
 
         //do something
         
-    } else if (endY - startY > 10) {
+    } else if (endY - startY > 5) {
 
         console.log("偵測到向下滑動");
 
