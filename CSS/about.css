@@ -393,6 +393,14 @@ hr.style-two {
 
 }
 
+/* 手機板 */
+/* 平板pro */
+@media (max-width :1024px){
+    .banner {
+        height: 80vh;
+        background-image: url('../IMG/chamonixBanner.png');
+    }
+}
 
 
 /* 手機板 */
@@ -414,7 +422,33 @@ hr.style-two {
     .banner {
         height: 100vh;
         background-image: url('../IMG/chamonixBanner.png');
-        background-size:cover;
-        background-position: center;
+    }
+    .soulBox .section2 .timeLine {
+        height: 250vh;
+        margin-top: 60px;
+        background-image: url("../IMG/About/phone_history.jpg");
+    }
+    .welfareBoxbanner {
+        height: 40vh;
+    }
+    .welfareBox .section3 .timeLine {
+        height: 190vh;
+        margin-top: 15%;
+        background-image: url('../IMG/About/phone_dream.jpg');
+       
+    }
+    .footer .footer_info .col-md-4{
+        order: 1;
+        height: 35vh;
+    }
+    .footer .footer_info .col-md-2{
+        width: 50%;
+        height: 20vh;
+    }
+    .footer {
+        margin-top: 55px;
+    }
+    .emailBox p{
+        font-size: 12px;
     }
 }
