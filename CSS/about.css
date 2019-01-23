@@ -424,7 +424,7 @@ hr.style-two {
         background-image: url('../IMG/chamonixBanner.png');
     }
     .soulBox .section2 .timeLine {
-        height: 250vh;
+        height: 220vh;
         margin-top: 60px;
         background-image: url("../IMG/About/phone_history.jpg");
     }
@@ -432,7 +432,7 @@ hr.style-two {
         height: 40vh;
     }
     .welfareBox .section3 .timeLine {
-        height: 190vh;
+        height: 184vh;
         margin-top: 15%;
         background-image: url('../IMG/About/phone_dream.jpg');
        
@@ -451,4 +451,55 @@ hr.style-two {
     .emailBox p{
         font-size: 12px;
     }
+    .bannerText{
+        display: none;
+    }
+    .soulBoxtext{
+        height: 44vh;
+    }
+    .imgBox{
+        height: 44vh;
+    }
+    /* 圖文順序 */
+    #post1 .soulBoxtext{
+        order: 1;
+    }
+    #post1 .imgBox1{
+        order: 0;
+    }
+    #post2 .soulBoxtext{
+        order: 1;
+    }
+    #post2 .imgBox1{
+        order: 0;
+    }
+    #post3 .soulBoxtext{
+        order: 1;
+    }
+    #post3 .imgBox1{
+        order: 0;
+    }
+    .left_right_text .imgBox1 {
+        background-position: -1229px;
+    }
+    .soulBox .boxTitle {
+        font-size: 18px;
+    }
+    .soulBox .boxText {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .welfareBox .boxTitle {
+        font-size: 18px;
+    }
+    .welfareBox .boxText {
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .tabitems {
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 5px 7px;
+    }
+    
 }
