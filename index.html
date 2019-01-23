@@ -441,6 +441,10 @@
         }
         /* 手機板 */
         @media (max-width : 415px){
+            body{
+                height: 100vh;
+                overflow: hidden;
+            }
             #btn.show {
                 height: 85%;
             }
@@ -676,9 +680,9 @@
             <div id="logo" class="col">
                 <div id="logoBox" class="">
                     <a href="index.html">
-                            <img src="/IMG/logo.png" alt="夏慕尼LOGO" class="rounded-circle">
+                        <img src="/IMG/logo.png" alt="夏慕尼LOGO" class="rounded-circle">
                     </a>
-                   
+
                 </div>
             </div>
             <div id="place" class="col-md-2 align-self-center">尋覓據點</div>
@@ -829,6 +833,61 @@
                     $('#section1').removeClass("hidden");
                 }
             });
+
+
+
+
+            // 改善手機介面上滑
+
+
+            //滑動起點與終點
+            var startY = 0;
+            var endY = 0;
+
+
+            //監聽window的觸控事件 
+
+            //touchstart:手指接觸螢幕的瞬間
+            window.addEventListener('touchstart', function (event) {
+
+                var touch = event.targetTouches[0];
+                //紀錄觸控起始點
+                startY = touch.pageY;
+                console.log("起始點:" + startY);
+
+            }, false)
+
+            //touchmove:手指點下去後移動的時候
+            window.addEventListener('touchmove', function (event) {
+
+                var touch = event.targetTouches[0];
+                //紀錄觸控起終點
+                endY = touch.pageY;
+                console.log("滑動距離:" + endY);
+
+            }, false)
+
+            //touchend:手指離開螢幕的瞬間
+            window.addEventListener('touchend', function (event) {
+
+                //終點 - 起點 = 距離   < 10 = 向上滑動如果大於10單位
+                if (endY - startY < 10) {
+
+                    console.log("偵測到向上滑動");
+
+                    //do something
+                    document.getElementById('btn').classList.add("show");
+                    document.getElementById('btn').classList.remove("hide");
+                } else if (endY - startY > 10) {
+
+                    console.log("偵測到向下滑動");
+
+                    //do something
+                    document.getElementById('btn').classList.remove("show");
+                    document.getElementById('btn').classList.add("hide");
+                }
+            }, false)
+
         </script>
 </body>
 
