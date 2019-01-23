@@ -98,13 +98,13 @@ window.addEventListener('touchend', function (event) {
         console.log("偵測到向上滑動");
 
         //do something
-        $('#section888').addClass('boxhid');
+        
     } else if (endY - startY > 10) {
 
         console.log("偵測到向下滑動");
 
         //do something
-
+        $('#section888').addClass('boxhid');
     }
 }, false)
 
