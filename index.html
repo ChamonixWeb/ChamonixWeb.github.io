@@ -879,6 +879,7 @@
                     console.log("偵測到向上滑動");
 
                     //do something
+                    document.getElementById('section1').classList.add("hidden");
                     document.getElementById('btn').classList.add("show");
                     document.getElementById('btn').classList.remove("hide");
                 } else if (endY - startY > 10) {
@@ -886,6 +887,7 @@
                     console.log("偵測到向下滑動");
 
                     //do something
+                    document.getElementById('section1').classList.remove("hidden");
                     document.getElementById('btn').classList.remove("show");
                     document.getElementById('btn').classList.add("hide");
                 }
