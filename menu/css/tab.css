@@ -1,0 +1,766 @@
+/* 選擇單人雙人套餐 */
+#tab01 {
+    background: linear-gradient(90deg, rgba(46, 55, 63, 1) 0%, rgba(39, 47, 54, 1) 42.81%, rgba(24, 29, 34, 1) 99.44%);
+    position: relative;
+    width: 100%;
+    height: 19vh;
+}
+
+
+.tab01-active{
+    border: 1px solid #e0d3b6 !important;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#tab01 #single {
+    color: #E0D3B6;
+    border: 1px solid transparent;
+    display: block;
+    float: left;
+    padding: 7px 35px;
+    font-size: 18px;
+    margin-right: 25px;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    letter-spacing: 3px;
+}
+
+#tab01 #single:hover {
+    border: 1px solid #e0d3b6;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#tab01 #double {
+    color: #E0D3B6;
+    border: 1px solid transparent;
+    display: block;
+    float: left;
+    padding: 7px 35px;
+    font-size: 18px;
+    margin-left: 25px;
+    position: absolute;
+    top: 35%;
+    left: 51%;
+    letter-spacing: 3px;
+}
+
+#tab01 #double:hover {
+    border: 1px solid #e0d3b6;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+#tab01 #singlePrice {
+    color: #E0D3B6;
+    display: block;
+    float: left;
+    padding: 5px 40px;
+    position: absolute;
+    top: 63%;
+    left: 40%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#tab01 #singlePrice p {
+    margin: 0;
+}
+
+#tab01 #doublePrice {
+    color: #E0D3B6;
+    display: block;
+    float: left;
+    padding: 5px 40px;
+    position: absolute;
+    top: 63%;
+    left: 52%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#tab01 #doublePrice p {
+    margin: 0;
+}
+
+/* 單人套餐主餐選單 */
+.tab02-active {
+    border: 1px solid #e0d3b6 !important;
+    background: rgba(45, 54, 61, 0.8);
+}
+
+#singleMainMeal {
+    background: linear-gradient(0deg, rgba(46, 55, 63, 1) 0%, rgba(39, 47, 54, 1) 42.81%, rgba(24, 29, 34, 1) 99.44%);
+    color: #E0D3B6;
+    position: relative;
+}
+
+#singleMainMeal #tab02 {
+    height: 250px;
+}
+
+#singleMainMeal .title {
+    color: #d5b36a;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 60px 0 50px 0;
+}
+
+#singleMainMeal #singleMainMeal_item {
+    position: absolute;
+    left: 3%;
+    margin: 25px 0;
+    letter-spacing: 3px;
+}
+
+#singleMainMeal .mainMeal_item {
+    display: block;
+    float: left;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    font-size: 18px;
+    margin-right: 25px;
+    width: 228px;
+    text-align: center;
+}
+
+#singleMainMeal .mainMeal_item:hover {
+    border: 1px solid #e0d3b6;
+    background: rgba(45, 54, 61, 0.8);
+    transition: 0.5s;
+}
+
+#singleMainMeal .mainMeal_content {
+    height: 52vh;
+    position: relative;
+}
+
+/* 白蘭地鴨胸詳細內容 */
+
+#singleMainMeal #duckBreastContent .mainMeal_picture {
+    background-image: url("../img/pc-single-duckBreast.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #duckBreastContent .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #duckBreastContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #duckBreastContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #duckBreastContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+
+/* 厚切熔岩起司牛排詳細內容 */
+#singleMainMeal #cheeseBeefContent{
+    display: none;
+}
+
+#singleMainMeal #cheeseBeefContent .mainMeal_picture {
+    background-image: url("../img/pc-single-cheeseBeef.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #cheeseBeefContent .content {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #cheeseBeefContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #cheeseBeefContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #cheeseBeefContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+
+/* 嫩煎松露菲力詳細內容 */
+#singleMainMeal #feiliContent{
+    display: none;
+}
+
+#singleMainMeal #feiliContent .mainMeal_picture {
+    background-image: url("../img/pc-single-feili.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #feiliContent .content {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #feiliContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #feiliContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #feiliContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+
+/* 香蒜牛小排詳細內容 */
+#singleMainMeal #beefContent{
+    display: none;
+}
+
+#singleMainMeal #beefContent .mainMeal_picture {
+    background-image: url("../img/pc-single-beef.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #beefContent .content {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #beefContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #beefContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #beefContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+/* 普羅旺斯雞排海鮮雙拼詳細內容 */
+#singleMainMeal #chickenContent{
+    display: none;
+}
+
+#singleMainMeal #chickenContent .mainMeal_picture {
+    background-image: url("../img/pc-single-chicken.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #chickenContent .content {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #chickenContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #chickenContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #chickenContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+
+/* 蘋果松阪豬詳細內容 */
+#singleMainMeal #applePigContent{
+    display: none;
+}
+
+#singleMainMeal #applePigContent .mainMeal_picture {
+    background-image: url("../img/pc-single-applePig.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #applePigContent .content {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #applePigContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #applePigContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #applePigContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+
+/* 法式羊小排詳細內容 */
+
+#singleMainMeal #sheepRowContent{
+    display: none;
+}
+
+#singleMainMeal #sheepRowContent .mainMeal_picture {
+    background-image: url("../img/pc-single-sheepRow.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#singleMainMeal #sheepRowContent .content {
+    float: left;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#singleMainMeal #sheepRowContent .content .mainMeal_title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#singleMainMeal #sheepRowContent .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+#singleMainMeal #sheepRowContent .content p:last-child {
+    font-size: 10px;
+    margin-top: 50px;
+    float: right;
+}
+/* 雙人套餐主餐選擇 */
+
+.tab03-active {
+    border: 1px solid #e0d3b6 !important;
+    background: rgba(45, 54, 61, 0.8);
+}
+
+
+#doubleMainMeal {
+    background: linear-gradient(0deg, rgba(46, 55, 63, 1) 0%, rgba(39, 47, 54, 1) 42.81%, rgba(24, 29, 34, 1) 99.44%);
+    color: #E0D3B6;
+    position: relative;
+    display: none;
+}
+
+#doubleMainMeal #tab03 {
+    height: 280px;
+}
+
+#doubleMainMeal #tab03 .title {
+    color: #d5b36a;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 60px 0 50px 0;
+}
+
+#doubleMainMeal #doubleMainMeal_item {
+    position: absolute;
+    left: 30%;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+#doubleMainMeal .mainMeal_item {
+    display: block;
+    float: left;
+    padding: 17px 5px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    margin-right: 25px;
+    width: 228px;
+    text-align: center;
+}
+
+#doubleMainMeal .mainMeal_item:hover {
+    border: 1px solid #e0d3b6;
+    background: rgba(45, 54, 61, 0.8);
+}
+
+#doubleMainMeal #doubleMainMeal_price {
+    position: absolute;
+    left: 33%;
+    top: 18%;
+    padding-left:10px; 
+}
+
+#doubleMainMeal #doubleMainMeal_price .mainMeal_price{
+    display: block;
+    float: left;
+    text-align: center;  
+    margin: 2px 185px 2px 0; 
+}
+
+#doubleMainMeal #doubleMainMeal_price .mainMeal_price p{
+    margin: 0; 
+    font-size: 12px; 
+}
+
+#doubleMainMeal .food_content {
+    height: 98vh;
+    position: relative;
+}
+
+
+/* 雙人羅西尼牛排 x 伊比利豬 前主餐*/
+
+
+#doubleMainMeal #beefAndPigContent .appetizer_content {
+    height: 50%;
+    position: relative;
+}
+
+#doubleMainMeal #beefAndPigContent .appetizer_content .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    padding: 40px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#doubleMainMeal #beefAndPigContent .appetizer_content .content .title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#doubleMainMeal #beefAndPigContent .appetizer_content .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+#doubleMainMeal #beefAndPigContent .appetizer_content .appetizer_picture {
+    background-image: url("../img/pc-double-scallop.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* 雙人羅西尼牛排 x 伊比利豬 主餐 */
+
+#doubleMainMeal #beefAndPigContent .mainMeal_content {
+    height: 50%;
+    position: relative;
+}
+
+#doubleMainMeal #beefAndPigContent .mainMeal_content .mainMeal_picture {
+    background-image: url("../img/pc-double-beefandpig.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#doubleMainMeal #beefAndPigContent .mainMeal_content .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 63%;
+    padding: 20px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#doubleMainMeal #beefAndPigContent .mainMeal_content .content .title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#doubleMainMeal #beefAndPigContent .mainMeal_content .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+#doubleMainMeal #beefAndPigContent .mainMeal_content .content p:last-child {
+    font-size: 10px;
+    margin-top: 30px;
+    float: right;
+}
+
+
+
+/* 雙人 美國1855肋眼12盎司  前主餐*/
+#doubleMainMeal #america-1885Content{
+    display: none;
+}
+
+#doubleMainMeal #america-1885Content .appetizer_content {
+    height: 50%;
+    position: relative;
+}
+
+#doubleMainMeal #america-1885Content .appetizer_content .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    padding: 40px 0 50px 70px;
+    letter-spacing: 2px;
+}
+
+#doubleMainMeal #america-1885Content .appetizer_content .content .title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#doubleMainMeal #america-1885Content .appetizer_content .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+#doubleMainMeal #america-1885Content .appetizer_content .appetizer_picture {
+    background-image: url("../img/pc-double-potato.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* 雙人 美國1855肋眼12盎司  主餐 */
+
+#doubleMainMeal #america-1885Content .mainMeal_content {
+    height: 50%;
+    position: relative;
+}
+
+#doubleMainMeal #america-1885Content .mainMeal_content .mainMeal_picture {
+    background-image: url("../img/pc-double-1885.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#doubleMainMeal #america-1885Content .mainMeal_content .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 63%;
+    padding: 20px 116px 50px 165px;
+    letter-spacing: 2px;
+}
+
+#doubleMainMeal #america-1885Content .mainMeal_content .content .title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#doubleMainMeal #america-1885Content .mainMeal_content .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+#doubleMainMeal #america-1885Content .mainMeal_content .content p:last-child {
+    font-size: 10px;
+    margin-top: 30px;
+    float: right;
+}
+
+
+/* 雙人 1314情人套餐  前主餐*/
+#doubleMainMeal #couple1314Content{
+    display: none;
+}
+
+#doubleMainMeal #couple1314Content .appetizer_content {
+    height: 50%;
+    position: relative;
+}
+
+#doubleMainMeal #couple1314Content .appetizer_content .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    padding: 40px 0 50px 180px;
+    letter-spacing: 2px;
+}
+
+#doubleMainMeal #couple1314Content .appetizer_content .content .title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#doubleMainMeal #couple1314Content .appetizer_content .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+#doubleMainMeal #couple1314Content .appetizer_content .appetizer_picture {
+    background-image: url("../img/pc-double-potato.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 95%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* 雙人 1314情人套餐  主餐 */
+
+#doubleMainMeal #couple1314Content .mainMeal_content {
+    height: 50%;
+    position: relative;
+}
+
+#doubleMainMeal #couple1314Content .mainMeal_content .mainMeal_picture {
+    background-image: url("../img/pc-double-1314.png");
+    background-size: cover;
+    background-position-y: 40%;
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    float: left;
+}
+
+#doubleMainMeal #couple1314Content .mainMeal_content .content {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 63%;
+    padding: 20px 0 50px 100px;
+    letter-spacing: 2px;
+}
+
+#doubleMainMeal #couple1314Content .mainMeal_content .content .title {
+    font-size: 24px;
+    color: #d5b36a;
+}
+
+#doubleMainMeal #couple1314Content .mainMeal_content .content p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+#doubleMainMeal #couple1314Content .mainMeal_content .content p:last-child {
+    font-size: 10px;
+    margin-top: 30px;
+    float: right;
+}

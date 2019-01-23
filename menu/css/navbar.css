@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "微軟正黑體";
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.pointer {
+    cursor: -webkit-grabbing; cursor: pointer;
+}
+
+
+/* navbar */
+#navbar {
+    background-color: #0A1532;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#navbar .nav-link {
+    color: #E0D3B6;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navbar #product {
+    padding: 20px 25px 20px 0px;
+    display: block;
+    float: left;
+}
+
+#navbar #news {
+    padding: 20px 0px 20px 25px;
+    display: block;
+    float: left;
+}
+
+#navbar #logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#navbar #logo img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+#navbar #place {
+    padding: 20px 25px 20px 0px;
+    display: block;
+    float: right;
+}
+
+#navbar #about {
+    padding: 20px 0px 20px 25px;
+    display: block;
+    float: right;
+}
+
+#banner {
+    width: 100%;
+    height: 78vh;
+    background-image: url("../img/pc-banner.jpg");
+    background-size: cover;
+    background-position-x: 60%;
+    background-attachment: fixed;
+}
+
+#banner_content{
+    height: 18vh;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 50px; 
+    background-color: #0A1532;
+    color: #E0D3B6;
+}

@@ -1,0 +1,208 @@
+.sides {
+    width: 100%;
+    height: 94vh;
+    background-color: #070f23;
+}
+
+.sides .item {
+    height: 50%;
+}
+
+.sides .item .container {
+    position: relative;
+}
+
+.sides .item .leftBox {
+    width: 200px;
+    display: block;
+    float: left;
+    border: 1px solid #e0d3b6;
+    text-align: center;
+    padding: 5px 15px;
+    background-color: #000;
+    letter-spacing: 3px;
+}
+
+.sides .item .leftBox .title {
+    color: #d5b36a;
+    font-size: 24px;
+}
+
+.sides .item .leftBox p {
+    color: #e0d3b6;
+    font-size: 18px;
+}
+
+.sides .item .rightBox {
+    width: 200px;
+    display: block;
+    float: right;
+    border: 1px solid #e0d3b6;
+    text-align: center;
+    padding: 0px 15px;
+    background-color: #000;
+    letter-spacing: 3px;
+}
+
+.sides .item .rightBox .title {
+    color: #d5b36a;
+    font-size: 24px;
+}
+
+.sides .item .rightBox p {
+    color: #e0d3b6;
+    font-size: 18px;
+}
+
+.sides #bread .leftBox {
+    position: absolute;
+    left: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
+
+.sides #bread #breadPicture {
+    background-image: url("../img/pc-bread.png");
+    background-size: cover;
+    background-position-y: 35%;
+    display: block;
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #appetizer #eggPicture {
+    background-image: url("../img/pc-egg.png");
+    background-size: cover;
+    background-position: 100%;
+    display: block;
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #appetizer .rightBox {
+    position: absolute;
+    right: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
+
+.sides #soup .leftBox {
+    position: absolute;
+    left: 0;
+    top: 258px;
+    transform: translateY(-50%);
+}
+
+.sides #soup .leftBox p:nth-child(2),
+.sides #soup .leftBox p:nth-child(3) {
+    letter-spacing: 6px;
+}
+
+.sides #soup #soupPicture {
+    background-image: url("../img/pc-soup.png");
+    background-size: cover;
+    background-position-y: 80%;
+    display: block;
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #salad #saladPicture {
+    background-image: url("../img/pc-salad.png");
+    background-size: cover;
+    background-position-y: 70%;
+    display: block;
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #salad .rightBox {
+    position: absolute;
+    right: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
+
+.sides #salad .rightBox p:nth-child(2) {
+    letter-spacing: 10px;
+}
+
+.sides #sorbet .leftBox {
+    position: absolute;
+    left: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
+
+.sides #sorbet #sorbetPicture {
+    background-image: url("../img/pc-sorbet.png");
+    background-size: cover;
+    background-position-y: 45%;
+    display: block;
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #rice #ricePicture {
+    background-image: url("../img/pc-rice.png");
+    background-size: cover;
+    background-position-y: 75%;
+    display: block;
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #rice .rightBox {
+    position: absolute;
+    right: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
+
+.sides #dessert .leftBox {
+    position: absolute;
+    left: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
+
+.sides #dessert .leftBox p:nth-child(2) {
+    letter-spacing: 8px;
+}
+
+.sides #dessert .leftBox p:nth-child(3) {
+    letter-spacing: 8px;
+}
+
+.sides #dessert #dessertPicture {
+    background-image: url("../img/pc-dessert.png");
+    background-size: cover;
+    background-position-y: 33%;
+    display: block;
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #drink #drinkPicture {
+    background-image: url("../img/pc-drink.png");
+    background-size: cover;
+    background-position-y: 75%;
+    display: block;
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.sides #drink .rightBox {
+    position: absolute;
+    right: 0;
+    top: 245px;
+    transform: translateY(-50%);
+}
