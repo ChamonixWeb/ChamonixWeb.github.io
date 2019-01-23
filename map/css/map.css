@@ -1,0 +1,615 @@
+*{
+    box-sizing: border-box;
+    font-family: "微軟正黑體";
+}
+body{
+    margin: 0;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.flex{
+    display: flex;
+}
+
+.pointer {cursor: pointer;}
+
+#navbar{
+    background-color: #0a1532;
+}
+
+#navbar .nav-link{
+    color: #e0d3b6;
+    font-size: 18px;
+    text-decoration: none;
+}
+#navbar #product{
+    padding: 25px 35px 25px 30px;
+    transform: translateX(-30px);
+}
+
+#navbar #news{
+    padding: 25px 30px 25px 30px;
+}
+
+#navbar #logo{
+    margin: .2rem auto; 
+}
+#navbar #logobox{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    overflow: hidden;
+}
+#navbar img{
+    width: 60px;
+    height: 60px;
+    transform: scale(1.4, 1.4);  
+}
+
+#navbar #place{
+    padding: 25px 35px 25px 30px;
+}
+#navbar #about{
+    padding: 25px 30px 25px 30px;
+    transform: translateX(30px);
+}
+
+#banner{
+    background-image: url("../img/banner2.jpg");
+    background-size: cover;
+    background-position-y: 0%;
+    height: 70vh;
+}
+
+#bannerText{
+    background-color: #0a1532;
+    height: 25vh;
+    padding-top: 80px; 
+}
+
+#bannerText p{
+    color: #e0d3b6;
+    margin: 0;
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+
+/* 地圖部分 */
+
+#placeContent{
+    height: 95vh;
+    width: 100%;
+    background-color: #0a1532; 
+    padding-top: 1px;
+}
+
+/* 全球據點 */
+#placeContent .title {
+    margin-bottom: 100px;
+}
+
+#placeContent .title h1{
+    color: #e0d3b6;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+#placeContent .title hr{
+    color: #e0d3b6;
+    border: 0;
+    width: 110px;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+}
+
+/* 排版 */
+
+#placeContent .flex{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 地圖名稱 */
+
+#map_name{
+    position: relative;
+}
+
+.map_name_hover{
+    background-color: #d5b36a;
+    color: #0a1532!important;
+    transition: 0.6s;
+}
+
+.map_name_onclick{
+    background-color: #d5b36a;
+    color: #0a1532!important;
+}
+
+#map_name .map-item{
+    position: absolute;
+    border: 1px solid #e0d3b6;
+    color: #e0d3b6;
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 500;
+}
+
+#map_name .north{
+    top: -18px;
+    left: 190px;
+}
+
+#map_name .taoyuan{
+    top: 37px;
+    left: 112px;
+}
+
+#map_name .taichung{
+    top: 142px;
+    left: 38px;
+}
+
+#map_name .south{
+    top: 521px;
+    left: 41px;
+}
+
+
+/* 地圖 */
+#map {
+    margin-left: 114px;
+    position: relative;
+}
+
+#map #taiwan {
+    position: absolute;    
+}
+
+#map .northpic {
+    top: 2px;
+    left: 202px;
+    filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+}
+
+#map .taoyuanpic {
+    top: 37px;
+    left: 148px;
+    filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+}
+
+#map .taichungpic {
+    top: 163px;
+    left: 74px;
+    filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+
+}
+
+#map .southpic {
+    top: 334px;
+    left: 0;
+    filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+
+}
+
+.taiwan_part {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.taiwan_part_hover {
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.onclick {
+    opacity: 1;
+}
+
+#placeContent .content{
+    margin-left: 550px;
+}
+
+/* 分店資訊 */
+
+.show{
+    display: flex ;
+}
+
+.hiden{
+    display: none;
+}
+
+.branch_item_onclick{
+    background-color: #070f23;
+    border: 1px solid #d5b36a !important;
+}
+
+/* 北部分店 */
+#placeContent #branch_north{
+    width: 670px;
+    height: 600px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#placeContent #branch_north .branch_item{
+    width: 30%;
+    height: 200px;
+    border: 1px solid transparent;
+    padding: 25px 20px;
+    margin: 0 10px;
+} 
+
+#placeContent #branch_north .branch_item:hover{
+    border: 1px solid #d5b36a;
+    background-color: #070f23;
+    transition: 0.5s;
+} 
+
+#placeContent #branch_north .branch_item h1{
+    color: #d5b36a;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_north .branch_item p{
+    color: #e0d3b6;
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_north .branch_item p:last-child{
+    color: #e0d3b6;
+    font-size: 12px;
+} 
+
+#placeContent #branch_north .branch_item hr{
+    color: #e0d3b6;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+}
+
+#placeContent #branch_north .branch_item .turnOn{
+    transform: translateY(2px);
+} 
+
+/* 分店詳細資訊 */
+#placeContent #branch_north .box{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    background-color: #070f23;
+}
+
+#placeContent #branch_north .box img{
+    width: 40%;
+    height: 100%;
+}
+
+#placeContent #branch_north .box .content{
+    width: 60%;
+    height: 100%;
+    padding: 15px 20px 0 20px; 
+    margin-left: 0;
+}
+
+#placeContent #branch_north .box .content .turnOff{
+    width: 18px;
+    height: 18px;
+    margin-left: 350px;    
+}
+
+#placeContent #branch_north .box .content p{
+    margin: 10px 0;
+    letter-spacing: 3px;
+    color: #e0d3b6;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 資訊內容複雜之排版 */
+#placeContent #branch_north .box2{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    background-color: #070f23;
+}
+
+#placeContent #branch_north .box2 img{
+    width: 40%;
+    height: 100%;
+}
+#placeContent #branch_north .box2 .content{
+    width: 60%;
+    height: 100%;
+    padding: 15px 25px 0 25px; 
+    margin-left: 0;
+    line-height: 1;
+}
+
+#placeContent #branch_north .box2 .content .turnOff{
+    width: 18px;
+    height: 18px;
+    margin-left: 350px;    
+}
+
+#placeContent #branch_north .box2 .content p{
+    margin: 3px 0;
+    letter-spacing: 3px;
+    color: #e0d3b6;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 桃竹 */
+
+#placeContent #branch_taoyuan{
+    width: 670px;
+    height: 600px;
+    flex-wrap: wrap;
+}
+
+#placeContent #branch_taoyuan .branch_item{
+    width: 30%;
+    height: 200px;
+    border: 1px solid transparent;
+    padding: 25px 20px;
+    margin: 0 10px;
+} 
+
+#placeContent #branch_taoyuan .branch_item:hover{
+    border: 1px solid #d5b36a;
+    transition: 0.5s;
+} 
+
+#placeContent #branch_taoyuan .branch_item h1{
+    color: #d5b36a;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_taoyuan .branch_item p{
+    color: #e0d3b6;
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_taoyuan .branch_item p:last-child{
+    color: #e0d3b6;
+    font-size: 12px;
+} 
+
+#placeContent #branch_taoyuan .branch_item hr{
+    color: #e0d3b6;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+}
+
+
+
+/* 台中分店 */
+#placeContent #branch_taichung{
+    width: 670px;
+    height: 600px;
+    justify-content: flex-start;
+}
+
+#placeContent #branch_taichung .branch_item{
+    width: 30%;
+    height: 200px;
+    border: 1px solid transparent;
+    padding: 25px 20px;
+    margin: 0 10px;
+} 
+
+#placeContent #branch_taichung .branch_item:hover{
+    border: 1px solid #d5b36a;
+    transition: 0.5s;
+} 
+
+#placeContent #branch_taichung .branch_item h1{
+    color: #d5b36a;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_taichung .branch_item p{
+    color: #e0d3b6;
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_taichung .branch_item p:last-child{
+    color: #e0d3b6;
+    font-size: 12px;
+} 
+
+#placeContent #branch_taichung .branch_item hr{
+    color: #e0d3b6;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+}
+
+/* 分店詳細資訊 */
+#placeContent #branch_taichung .box{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    background-color: #070f23;
+}
+
+#placeContent #branch_taichung .box img{
+    width: 40%;
+    height: 100%;
+}
+
+#placeContent #branch_taichung .box .content{
+    padding: 30px 0 0 25px; 
+    color: #e0d3b6;
+    font-size: 14px;
+}
+
+/* 南部分店 */
+#placeContent #branch_south{
+    width: 670px;
+    height: 600px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#placeContent #branch_south .branch_item{
+    width: 30%;
+    height: 200px;
+    border: 1px solid transparent;
+    padding: 25px 20px;
+    margin: 0 10px;
+} 
+
+#placeContent #branch_south .branch_item:hover{
+    border: 1px solid #d5b36a;
+    transition: 0.5s;
+} 
+
+#placeContent #branch_south .branch_item h1{
+    color: #d5b36a;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_south .branch_item p{
+    color: #e0d3b6;
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 3px;
+} 
+
+#placeContent #branch_south .branch_item p:last-child{
+    color: #e0d3b6;
+    font-size: 12px;
+} 
+
+#placeContent #branch_south .branch_item hr{
+    color: #e0d3b6;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+}
+
+/* 分店詳細資訊 */
+#placeContent #branch_south .box{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    background-color: #070f23;
+}
+
+#placeContent #branch_south .box img{
+    width: 40%;
+    height: 100%;
+}
+
+#placeContent #branch_south .box .content{
+    padding: 30px 0 0 25px; 
+    color: #e0d3b6;
+    font-size: 14px;
+}
+
+/* footer */
+
+#footer{
+    height: 220px;
+    width: 100%;
+    text-align: center;
+    background-color: #070f23;
+}
+
+#footer #link{
+    display: flex;
+    width: 100%;
+    height: 160px;   
+}
+
+#footer #booking{
+    width: 15%;
+    text-decoration: none;
+    border:  1px solid #d5b36a;
+    color: #e0d3b6;
+    font-size: 18px; 
+    padding: 30px 0;
+}
+
+#footer #app{
+    width: 15%;
+    text-decoration: none;
+    border:  1px solid #d5b36a;
+    color: #e0d3b6;
+    font-size: 18px; 
+    padding: 50px 0;
+}
+
+#footer #time{
+    width: 40%;
+    border:  1px solid #d5b36a;
+    color: #e0d3b6;
+    font-size: 18px; 
+    padding-top: 20px;
+}
+
+#footer #time p:first-child{
+    font-size: 12px; 
+    transform: translateX(-120px);
+}
+
+#footer #fb{
+    width: 15%;
+    text-decoration: none;
+    border:  1px solid #d5b36a;
+    color: #e0d3b6;
+    font-size: 18px; 
+    padding: 68px 0;
+}
+
+#footer #contact{
+    width: 15%;
+    text-decoration: none;
+    border:  1px solid #d5b36a;
+    color: #e0d3b6;
+    font-size: 18px;
+    padding: 50px 0; 
+}
+
+#footer #statement{
+    width: 100%;
+    height: 60px;
+    color: #e0d3b6;
+    font-size: 12px; 
+}
+#footer #statement p{
+    margin: 24px 0;
+}
