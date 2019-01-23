@@ -58,7 +58,7 @@ body{
 }
 
 #banner{
-    background-image: url("/img/banner2.jpg");
+    background-image: url("../img/banner2.jpg");
     background-size: cover;
     background-position-y: 0%;
     height: 70vh;
