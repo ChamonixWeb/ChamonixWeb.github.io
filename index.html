@@ -20,80 +20,65 @@
 
     <style>
         body {
-
             margin: 0;
             background-color: rgb(0, 0, 0);
             font-family: 'Noto Sans TC', sans-serif;
             font-weight: 300;
             overflow-y: hidden;
-
-
         }
-
         #bgimg {
-            width: 100vw;
+            /* width: 100vw;
             height: 100vh;
-            background-image: url("bodyBackground/bodybgimg.jpg");
+            background-image: url("bodyBackground/bodybgimg.jpg"); */
             background-size: cover;
             background-position: center;
             position: fixed;
             top: 0;
             left: 0;
-
+            opacity: 0.6;
         }
-
         #mask {
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
-
         }
-
+        a {
+            color: #F4E7B4;
+        }
+        a:visited{
+            color: #F4E7B4;
+        }
         /* NAVBAR */
         #navbar {
-            padding-top: 50px;
+            padding-top: 30px;
             font-size: 18px;
             color: #F4E7B4;
             letter-spacing: 3px;
-
         }
-
         #navbar.hidden {
             display: none;
         }
-
         #product {
-
             text-align: center;
         }
-
         #news {
-
             text-align: center;
         }
-
-
         #logoBox {
             margin: auto;
             height: 84px;
             width: 84px;
         }
-
         #logoBox img {
             height: 100%;
             width: 100%;
         }
-
         #about {
             text-align: center;
-
         }
-
         #place {
             text-align: center;
-
         }
-
         #section1 {
             position: fixed;
             left: 50%;
@@ -101,16 +86,11 @@
             /* 調回自身50%的寬度 */
             transform: translate(-50%, -50%);
         }
-
         #section1.hidden {
             display: none;
         }
-
-
-
         /* 主標題區 */
         #mainText {
-
             text-align: center;
             /* padding-top: 260px; */
             font-size: 36px;
@@ -118,15 +98,11 @@
             letter-spacing: 15px;
             /* 縮排 */
             text-indent: 15px;
-
         }
-
         #storeName {
             font-size: 23px;
         }
-
         /* 透明漸變 - color - transparent */
-
         hr.style-two {
             position: relative;
             z-index: 6;
@@ -135,10 +111,7 @@
             color: rgb(224, 211, 182);
             width: 180px;
             background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
-
         }
-
-
         /* 副標題 */
         #subText {
             margin-top: 36px;
@@ -147,7 +120,6 @@
             color: #E0D3B6;
             letter-spacing: 3px;
         }
-
         /* 頁尾 */
         footer {
             text-align: center;
@@ -159,18 +131,15 @@
             transform: translate(-50%, -50%);
             bottom: -50px;
         }
-
         footer.hidden {
             display: none;
         }
-
         #bottomline {
             width: 1px;
             height: 58.5px;
             background-color: #E0D3B6;
             margin: 18px auto;
             z-index: 2;
-
             /* 漸層出現動畫 */
             background: linear-gradient(#b9af96 10%, transparent);
             -webkit-transform-origin: center top;
@@ -178,83 +147,62 @@
             -webkit-animation: blingbling 2.5s linear infinite;
             animation: blingbling 2.5s linear infinite;
         }
-
-
-
         @keyframes blingbling {
             0% {
                 -webkit-transform: scaleY(0);
                 transform: scaleY(0);
                 opacity: 0;
             }
-
             25% {
                 -webkit-transform: scaleY(1);
                 transform: scaleY(1);
                 opacity: 0.5;
             }
-
             50% {
                 -webkit-transform: scaleY(1);
                 transform: scaleY(1);
                 opacity: 1;
             }
-
             75% {
                 -webkit-transform: scaleY(1);
                 transform: scaleY(1);
                 opacity: .5;
             }
-
             100% {
                 -webkit-transform: scaleY(1);
                 transform: scaleY(1);
                 opacity: 0;
             }
         }
-
-
-
-
-
-
         /* 隱藏的版面 滑鼠下滾後出現 上滾時還原原版*/
         #btn {
             position: absolute;
             width: 100%;
             height: 300px;
             background-color: rgba(0, 0, 0, 0.6);
-
-
         }
-
         #btn.show {
             z-index: 99;
             bottom: 0px;
             transition: 0.3s;
         }
-
         /* 讓消失時也有做緩慢移動 */
         #btn.hide {
             z-index: 99;
             bottom: -600px;
             transition: 0.3s;
         }
-
         #btnInfo {
             color: #E0D3B6;
             text-align: center;
             letter-spacing: 3px;
         }
-
         #btnOption {
             color: #E0D3B6;
             text-align: center;
             font-size: 20px;
             letter-spacing: 3px;
         }
-
-
         #btnOption .box {
             width: 100%;
             height: 100%;
@@ -271,11 +219,7 @@
             text-align: left;
             margin: 0;
         }
-        /* #btnOption .box p:first-child {
-            text-align: left;
-            margin: 0;
-        } */
-
+       
         #openTime p {
             text-align: center;
            
@@ -291,66 +235,51 @@
             display: flex;
             justify-content: center;
         }
-
-
         /* 跳出有X的中間方塊 */
         .HIDboxContant1 {
             border: 1px solid #E0D3B6;
             display: none;
-
             color: #E0D3B6;
         }
-
         .HIDboxContant2 {
             padding: 5% 10%;
             font-size: 20px;
             letter-spacing: 2px;
-
         }
-
         #closeIcon {
             height: 100%;
             width: 100%;
         }
-
         #closeBox {
             height: 100%;
             width: 30px;
             padding-top: 20px;
             padding-left: 94%;
-
         }
-
         .close1 {
-
             width: 32px;
             height: 2px;
             background-color: #E0D3B6;
             transform: rotate(45deg) translateY(1px);
         }
-
         .close2 {
             width: 32px;
             height: 2px;
             background-color: #E0D3B6;
             transform: rotate(135deg) translateY(2px);
         }
-
         /* 跳出有X的中間方塊----出現&消失 */
-
         .HIDboxContant1.show {
             z-index: 99;
             display: none;
             transition: 0.3s;
         }
-
         .HIDboxContant1.hide {
             z-index: 99;
             display: block;
             transition: 0.3s;
             margin-top: 24%;
         }
-
         /* 改變mouse 樣式為超連結的手指 */
         .myMouse {
             cursor: pointer;
@@ -362,7 +291,6 @@
             font-size: 10px;
             text-align: center;
         }
-
        /* 彈跳視窗修改 */
        .modal{
            display: fixed;
@@ -371,7 +299,6 @@
        .modal-content {
             left: -65px;
             width: 630px;}
-
        .modal-header {
             border-bottom: none;
         }
@@ -397,70 +324,9 @@
         .web{
             display: block;
         }
-
-        #phone_btn{
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #E0D3B6;
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            bottom: 100vh;
-            
-        }
-        #phone_btn.show {
-            z-index: 99;
-            bottom: 0;
-            transition: 1s;
-        }
-
-        /* 讓消失時也有做緩慢移動 */
-        #phone_btn.hide {
-            z-index: 99;
-            bottom: -100vh;
-            transition: 1s;
-        }
-
-        .A {
-            width: 50%;
-            height: 25vh;
-            border: 1px solid #E0D3B6;
-            box-sizing: border-box;
-            float: left;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 2px;
-        
-        }
-
-        .E {
-            width: 100%;
-            height: 50vh;
-            border: 1px solid #E0D3B6;
-            box-sizing: border-box;
-            text-align: justify;
-            float: left;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            letter-spacing: 3px;
-        }
-        .E p:first-child{
-            text-align: left;
-            font-size: 8px;
-        }
-        .E p:nth-child(7){
-            font-size: 8px;
-            letter-spacing: 4.2px;
-        }
-        .E p:last-child{
-            font-size: 8px;
-            letter-spacing: 3.5px;
-        }
+       
         #myNavbar{
+            padding: 0;
             display: none;
         }
         .logobox{
@@ -475,23 +341,25 @@
             transform: translateX(-50%);
             border-radius: 50%;
         }
+        .navbar-light .navbar-nav .nav-link{
+                color: #F4E7B4;
+            }
         .navbar-light .navbar-toggler-icon {
             background-image: url('IMG/Group1.png');
         }
         .navbar-toggler:not(:disabled):not(.disabled) {
             border: none;
         }
-       
+        .PC{
+            display: block;
+        }
+        .mobile{
+            display: none;
+        }
       
         
-
         /* RWD設置 */
-        @media (max-width :1920px){
-           
-            #phone_btn{
-                display:none;
-            }
-        }
+       
         /* 小螢幕 */
         @media (max-width :1328px){
             #C{
@@ -503,11 +371,14 @@
             #C .notImportant2 span:last-child{
                 letter-spacing: 12.5px;
             } 
-            #phone_btn{
-                display:none;
+        }
+        /* 更改影片滿版 */
+        @media (max-width :1200px){
+            #webMV{
+                width: auto;
             }
         }
-        /* 大平板，小平板 */
+        /* 大平板*/
         @media (max-width :1024px){
             .web{
             display: none;
@@ -527,18 +398,51 @@
                 font-size: 8px;
                 letter-spacing: 3px;
             }
-            #phone_btn.show{
+            #webMV{
+                position: relative;
+                left: -11%;
+            }
+        
+           
+        }
+        /* 小平板  */
+        @media (max-width :768px){
+            #btn.show {
+                height: 55%;
+            }
+            #product{
+                width: 120px;
+            }
+            #news{
+                width: 120px;
+            }
+            #place{
+                width: 120px;
+            }
+            #about{
+                width: 120px;
+            }
+            @media (min-width: 576px){
+                    .container {
+                    max-width: 760px;
+                }
+            }
+            .PC{
                 display: none;
             }
+            .mobile{
+                 display: block;
+            }
+            #webMV{
+                position: relative;
+                left: -35%;
+            }
+
         }
         /* 手機板 */
-
         @media (max-width : 415px){
             #btn.show {
-                display: none;
-            }
-            #phone_btn.show{
-                display: block;
+                height: 85%;
             }
             .modal-content {
                 left: 0;
@@ -577,6 +481,8 @@
             }
             #myNavbar{
                 display: block;
+                background-color: black;
+                z-index:99;
             }
             .navbar-toggler:not(:disabled):not(.disabled) {
                 position: absolute;
@@ -601,10 +507,8 @@
                 font-size: 20px;
                 border: 1px solid #E0D3B6; 
             }
-            .navbar-light .navbar-nav .nav-link{
-                color: #F4E7B4;
-            }
             
+           
         }
        
        
@@ -614,59 +518,11 @@
 <!--   ------------------     我是body區塊     -----------------------      -->
 
 <body>
-
-
-
-    <!-- 隱藏的版面 -->
-    <div id="phone_btn" class="hide">
-        <div class="box">
-            <div class="A myMouse" onclick="window.open('http://partner.eztable.com/chamonix')">
-                EZTABLE
-                <br>
-                線上訂位
-
-            </div>
-            <div class="A myMouse" onclick="window.open('http://wowfoods.wowprime.com/front/web/index.do')">
-                <br>
-                瘋美食APP
-                <br>
-            </div>
-            <div class="A myMouse" onclick="window.open('https://www.facebook.com/chamonix.com.tw/?eid=ARCT0i-PEQFKyLaMF3fNU_DEMiiuKbLrK0AWjigVxye9zKTG6GGKMEHABIuDizBF--LjRfVU8HqGzre4')">
-                <br>
-                FB粉絲團
-                <br>
-            </div>
-            <div class="A myMouse" onclick="location.href='#'" data-toggle="modal" data-target="#exampleModal">
-                <br>
-                聯絡我們
-                <br>
-            </div>
-        </div>
-
-        <div class="E">
-            <div class="pad">
-                <p>營業時間</p>
-                <p>11:30 - 14:30 </p>
-                <p>(最後用餐時間14:00)</p>
-                <p>17:30 - 22:00</p>
-                <p> (最後用餐時間21:00)</p>
-                <br>
-                <P>網站學術用途，如侵權請告知</p>
-                <P>Chamonixweb@gmail.com</p>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-
-
-
-
-
     <div id="btn" class="hide">
         <div class="container-fluid">
             <!-- no-gutters刪除 -->
             <div id="btnOption" class="row no-gutters">
-                <div class="col-md-4">
+                <div class="col-lg-4 order-lg-1 col-6 orde-1">
 
                     <!-- onclick="location.href='http://' 將整個DIV區域指定為連結 -->
                     <div class="row myMouse" onclick="window.open('http://partner.eztable.com/chamonix')">
@@ -695,7 +551,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-lg-4 order-lg-2 col-12 order-3">
                     <div class="box">
                         <div class="web">
                             <div class="info">
@@ -727,12 +583,12 @@
                             <p> (最後用餐時間21:00)</p>
                             <br>
                             <P>網站學術用途，如侵權請告知</p>
-                            <P>Chamonixweb@gmail.com</p>
+                            <P>chamonixweb@gmail.com</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-lg-4 order-lg-3 col-6 order-2">
 
                     <!-- onclick="location.href='http://' 將整個DIV區域指定為連結 -->
                     <div class="row myMouse" onclick="window.open('https://www.facebook.com/chamonix.com.tw/?eid=ARCT0i-PEQFKyLaMF3fNU_DEMiiuKbLrK0AWjigVxye9zKTG6GGKMEHABIuDizBF--LjRfVU8HqGzre4')">
@@ -774,13 +630,17 @@
     <div id="bgimg">
         <!-- 黑色半透明 -->
         <div id="mask"></div>
+        <video id="webMV" autoplay loop muted width="100%" height="100%">
+            <source class="PC" src="video/chamonix-pc-big.mp4" type="video/mp4">
+            <source class="mobile" src="video/chamonix-mobile-small.mp4" type="video/mp4">
+        </video>
     </div>
 
     <!-- Navbar -->
     <!-- 釘選直接寫在style裡面 -->
-    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-light" style="background-color: none; position: fixed;width: 100%;top: 0;left: 0; z-index: 2;">
+    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-light" style="background-color: none; position: fixed;width: 100%;top: 0;left: 0;">
         <div class="container custom-container-width">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <button id="bugerBar" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -793,13 +653,13 @@
                         <a class="nav-link" href="#">頂級饗宴</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">夏慕新聞</a>
+                        <a class="nav-link" href="announcement.html">夏慕新聞</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">尋覓據點</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">邂逅夏慕</a>
+                        <a class="nav-link" href="about.html">邂逅夏慕</a>
                     </li>
                 </ul>
             </div>
@@ -810,14 +670,21 @@
         <div id="navbar" class="row">
 
             <div id="product" class="col-md-2 align-self-center">頂級饗宴</div>
-            <div id="news" class="col-md-2 align-self-center">夏慕新聞</div>
+            <div id="news" class="col-md-2 align-self-center">
+                <a class="nav-link" href="announcement.html">夏慕新聞</a>
+            </div>
             <div id="logo" class="col">
                 <div id="logoBox" class="">
-                    <img src="logo.png" alt="" class="rounded-circle">
+                    <a href="index.html">
+                            <img src="/IMG/logo.png" alt="夏慕尼LOGO" class="rounded-circle">
+                    </a>
+                   
                 </div>
             </div>
             <div id="place" class="col-md-2 align-self-center">尋覓據點</div>
-            <div id="about" class="col-md-2 align-self-center">邂逅夏慕</div>
+            <div id="about" class="col-md-2 align-self-center">
+                <a class="nav-link" href="about.html">邂逅夏慕</a>
+            </div>
 
         </div>
 
@@ -928,9 +795,6 @@
 
 
         <script>
-
-
-
             window.addEventListener('wheel', function (e) {
                 // 滑鼠上滾
                 if (e.deltaY < 0) {
@@ -938,48 +802,33 @@
                     document.getElementById('section1').classList.remove("hidden");
                     // document.getElementById('navbar').classList.remove("hidden");
                     document.querySelector('footer').classList.remove("hidden");
-
                     // footer區塊
                     document.getElementById('btn').classList.remove("show");
                     document.getElementById('btn').classList.add("hide");
 
-
-                    document.querySelector('#phone_btn').classList.remove("show");
-                    document.querySelector('#phone_btn').classList.add("hide");
-
-                    // // 中間有關閉圖式的區塊
-                    // document.querySelector('.HIDboxContant1').classList.remove("hide");
-                    // document.querySelector('.HIDboxContant1').classList.add("show");
-
-
-                    // document.getElementById('status').innerHTML = 'scrolling up';
                 }
-
                 // 滑鼠下滾
                 if (e.deltaY > 0) {
                     console.log('scrolling down');
                     document.getElementById('section1').classList.add("hidden");
                     // document.getElementById('navbar').classList.add("hidden");
                     document.querySelector('footer').classList.add("hidden");
-
                     // footer區塊
                     document.getElementById('btn').classList.add("show");
                     document.getElementById('btn').classList.remove("hide");
 
-
-                    document.querySelector('#phone_btn').classList.add("show");
-                    document.querySelector('#phone_btn').classList.remove("hide");
-
-
-                    // // 中間有關閉圖式的區塊
-                    // document.querySelector('.HIDboxContant1').classList.add("hide");
-                    // document.querySelector('.HIDboxContant1').classList.remove("show");
-
-                    // document.getElementById('status').innerHTML = 'scrolling down';
                 }
             });
 
+            $('#bugerBar').click(function () {
+                document.getElementById('btn').classList.remove("show");
+                document.getElementById('btn').classList.add("hide");
 
+                // 判斷如果foooter資訊消失，就把首頁的文字顯示
+                if ($('#btn').is('.hide')) {
+                    $('#section1').removeClass("hidden");
+                }
+            });
         </script>
 </body>
 
