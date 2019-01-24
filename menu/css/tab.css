@@ -149,6 +149,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #duckBreastContent .content {
@@ -192,6 +193,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #cheeseBeefContent .content {
@@ -234,6 +236,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #feiliContent .content {
@@ -276,6 +279,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #beefContent .content {
@@ -317,6 +321,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #chickenContent .content {
@@ -359,6 +364,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #applePigContent .content {
@@ -402,6 +408,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #singleMainMeal #sheepRowContent .content {
@@ -560,6 +567,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #doubleMainMeal #beefAndPigContent .mainMeal_content .content {
@@ -649,6 +657,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #doubleMainMeal #america-1885Content .mainMeal_content .content {
@@ -737,6 +746,7 @@
     bottom: 0;
     display: block;
     float: left;
+    background-position-x: 100%;
 }
 
 #doubleMainMeal #couple1314Content .mainMeal_content .content {

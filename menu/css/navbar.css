@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -32,23 +32,25 @@ body {
     color: #E0D3B6;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: 700;
+
 }
 
 #navbar #product {
-    padding: 20px 25px 20px 0px;
+    padding: 25px 25px 25px 0px;
     display: block;
     float: left;
 }
 
 #navbar #news {
-    padding: 20px 0px 20px 25px;
+    padding: 25px 0px 25px 25px;
     display: block;
     float: left;
 }
 
 #navbar #logo {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -60,13 +62,13 @@ body {
 }
 
 #navbar #place {
-    padding: 20px 25px 20px 0px;
+    padding: 25px 25px 25px 0px;
     display: block;
     float: right;
 }
 
 #navbar #about {
-    padding: 20px 0px 20px 25px;
+    padding: 25px 0px 25px 25px;
     display: block;
     float: right;
 }
