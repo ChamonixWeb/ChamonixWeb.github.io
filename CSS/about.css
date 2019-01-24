@@ -46,6 +46,10 @@ a:visited {
     background-size: cover;
     background-position: center;
     border-radius :50%;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 @media (min-width: 992px){
 .navbar-expand-lg .navbar-nav .nav-link {

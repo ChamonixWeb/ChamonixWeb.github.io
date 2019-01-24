@@ -22,7 +22,7 @@ body{
 
 #navbar .nav-link{
     color: #e0d3b6;
-    font-size: 18px;
+    font-size: 1rem;
     text-decoration: none;
 }
 #navbar #product{
@@ -46,7 +46,7 @@ body{
 #navbar img{
     width: 60px;
     height: 60px;
-    transform: scale(1.4, 1.4);  
+    /* transform: scale(1.4, 1.4);   */
 }
 
 #navbar #place{
