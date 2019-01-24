@@ -408,6 +408,10 @@ hr.style-two {
 
 /* 平板pro */
 @media (max-width :1024px){
+    .logobox{
+        top: -1px;
+    }
+    
     .banner {
         height: 80vh;
         background-image: url('../IMG/chamonixBanner.png');
@@ -455,7 +459,10 @@ hr.style-two {
         border: 1px solid #F4E7B4;
         padding: 7%;
     }
-    
+
+    .logobox{
+        top: -1px;
+    }
     
     /* 圖文順序 */
     #post1 .soulBoxtext{
