@@ -1,0 +1,1730 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 每次載入需填寫版本 4.4.6 (找最新版) -->
+    <!-- Swiper/4.4.1 解決輪播順序問題 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+
+
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #0A1532;
+        }
+
+        .container.custom-container-width {
+            max-width: 1170px;
+            padding: 0;
+        }
+        a:link {
+            color:#F4E7B4;
+            text-decoration: none;
+        }
+        /* 滾軸設定 */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background-color: #070f23;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background-color: #d5b36a;
+            border-radius: 4px;
+        }
+
+　
+
+        /* Navbar------------------------------------------- */
+        .myNavbar{
+            position: absolute;
+            z-index: 999;
+        }
+        .navbar-brand{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .navbar{
+            padding: 1% 0;
+        }
+        .navbar-light .navbar-nav .nav-link { 
+            color:rgba(244, 231, 180, 0.7);
+        }
+       
+        @media (min-width: 992px){
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 40px;
+        }
+    }
+        /* 右邊item對齊container邊界 */
+        .navbar-expand-lg  .ml-auto  .nav-item:nth-child(2) a {
+            padding-right: 0px;
+        }
+        /* 左邊item對齊container邊界 */
+            .navbar-expand-lg  .mr-auto  .nav-item:first-child a {
+            padding-left: 0px;
+        }
+        #navbarSupportedContent .nav-item a:hover{
+            color:#F4E7B4;
+        }
+        .changeBGcolor{
+            background-color: rgb(1, 5, 15); 
+        }
+
+
+        /* banner----------------------------------------- */
+        
+        .banner{
+            width: 100%;
+            height: 72vh;
+            margin-top: 59px;
+            background-image: url('map/img/banner2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .bannerText{
+            width: 100%;
+            text-align: center;
+            color: #E0D3B6;
+            padding: 3.1% 0;
+        }
+        .bannerText p{
+           font-size: 19px;
+           line-height: 35px;
+           letter-spacing: 4px;
+           text-indent: 4px;
+        }
+
+        
+        /* footer   -------------------------------------- */
+        .footer{
+            margin-top: 150px;
+            color: #F4E7B4;
+            letter-spacing: 4px;
+            /* 縮排 */
+            text-indent: 4px;
+            background-color:#070f23;
+        }
+        .footer .row .col{
+            text-align:  center;
+            letter-spacing: 3px;
+            /* 縮排 */
+            text-indent: 3px;
+        }
+
+        .footer_info .col-md-2{
+            border: 1px solid #F4E7B4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top :20px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .footer_info .col-md-4{
+            border: 1px solid #F4E7B4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top :20px;
+            padding-bottom: 20px;
+        }
+       
+        .openTime p{
+            text-align: center;
+        }
+        .emailBox{
+            margin-top: 10px;
+        }
+        .textBox p:first-child{
+            text-align: left;
+        }
+
+
+
+
+        /* 聯絡我們折疊------------------------------- */
+        .section888{
+            width: 100%;
+            height: 280px;
+            color: #F4E7B4;
+            background-color: #1A1A1A;
+            border-radius: 15px;
+            border: 1px solid;
+            position: fixed;
+            bottom:50px;
+            z-index: 999;
+            pointer-events: none;
+            display: none;
+        }
+        .boxSh{
+            display: block;
+            pointer-events: auto;
+        }
+        .boxhid{
+            display: none;
+            pointer-events: none;
+        }
+        
+        .section888 .infoBox{
+            float: left;
+            width: 50%;
+            height: 100%;
+            text-align: left;
+            padding-left:27%;
+            padding-top:3%;
+            letter-spacing: 4px;
+
+        }
+        .section888 .infoBox2{
+            float: left;
+            width: 50%;
+            height: 100%;
+            text-align: left;
+            padding-left:2%;
+            padding-top:3%;
+        }
+        .infoBox p:first-child {
+            letter-spacing: 3.7px;
+        }
+        .A{
+            letter-spacing: 4.7px;
+        }
+        .closebtn{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .box666{
+            position: relative;
+        }
+        
+        /* 右邊資訊---------------------------- */
+
+        .infoBox2 p span:first-child {
+            letter-spacing: 7.8px;
+        }
+        .infoBox2 p span:last-child {
+            letter-spacing: 4.5px;
+        }
+        .infoBox2 .mailText span:last-child {
+            letter-spacing: 6.1px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .section2{
+            margin-top: 10%;
+        }
+        .navbar-light .navbar-toggler-icon {
+            background-image: url('IMG/Group1.png');
+        }
+        .navbar-toggler:not(:disabled):not(.disabled) {
+            border: none;
+            position: fixed;
+            top: 30px;
+            right: 10px;
+        }
+        .logobox{
+            width: 60px;
+            height: 60px;
+            background-image: url("IMG/logo.png");
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        .navbar_blue{
+            width: 100%;
+            height: 12vh;
+            background-color: #0A1532;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+        }
+        .phoneText{
+            float: left;
+            color: white;
+            padding: 0 2%;
+            margin-top: 40%;
+            display: none;
+        }
+        .phoneboxText{
+            text-align: center;
+        }
+        hr.style-two {
+            position: relative;
+            z-index: 0;
+            border: 0;
+            height: 1px;
+            color: rgb(224, 211, 182);
+            width: 180px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+
+        }
+        
+        #phoneNavbar{
+            display: none;
+        }
+        .flex{
+            display: flex;
+        }
+        /* 地圖部分 */
+
+        #placeContent{
+            height: 95vh;
+            width: 100%;
+            background-color: #0a1532; 
+            padding-top: 1px;
+        }
+
+        /* 全球據點 */
+        #placeContent .title {
+            margin-bottom: 100px;
+        }
+
+        #placeContent .title h1{
+            color: #e0d3b6;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 5px;
+        }
+
+        #placeContent .title hr{
+            color: #e0d3b6;
+            border: 0;
+            width: 110px;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+        }
+
+        /* 排版 */
+
+        #placeContent .flex{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* 地圖名稱 */
+
+        #map_name{
+            position: relative;
+        }
+
+        .map_name_hover{
+            background-color: #d5b36a;
+            color: #0a1532!important;
+            transition: 0.6s;
+        }
+
+        .map_name_onclick{
+            background-color: #d5b36a;
+            color: #0a1532!important;
+        }
+
+        #map_name .map-item{
+            position: absolute;
+            border: 1px solid #e0d3b6;
+            color: #e0d3b6;
+            padding: 4px 10px;
+            border-radius: 4px;
+            width: 130px;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 500;
+        }
+
+        #map_name .north{
+            top: -18px;
+            left: 190px;
+        }
+
+        #map_name .taoyuan{
+            top: 37px;
+            left: 112px;
+        }
+
+        #map_name .taichung{
+            top: 142px;
+            left: 38px;
+        }
+
+        #map_name .south{
+            top: 521px;
+            left: 41px;
+        }
+
+
+        /* 地圖 */
+        #map {
+            margin-left: 114px;
+            position: relative;
+        }
+
+        #map #taiwan {
+            position: absolute;    
+        }
+
+        #map .northpic {
+            top: 2px;
+            left: 202px;
+            filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+        }
+
+        #map .taoyuanpic {
+            top: 37px;
+            left: 148px;
+            filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+        }
+
+        #map .taichungpic {
+            top: 163px;
+            left: 74px;
+            filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+
+        }
+
+        #map .southpic {
+            top: 334px;
+            left: 0;
+            filter: drop-shadow(3px 3px 8px rgba(6, 10, 59, 0.342));
+
+        }
+
+        .taiwan_part {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.6s;
+        }
+
+        .taiwan_part_hover {
+            opacity: 1;
+            transition: opacity 0.6s;
+        }
+
+        .onclick {
+            opacity: 1;
+        }
+
+        #placeContent .content{
+            margin-left: 550px;
+        }
+
+        /* 分店資訊 */
+
+        .show{
+            display: flex ;
+        }
+
+        .hiden{
+            display: none;
+        }
+
+        .branch_item_onclick{
+            background-color: #070f23;
+            border: 1px solid #d5b36a !important;
+        }
+
+        /* 北部分店 */
+        #placeContent #branch_north{
+            width: 670px;
+            height: 600px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        #placeContent #branch_north .branch_item{
+            width: 30%;
+            height: 200px;
+            border: 1px solid transparent;
+            padding: 25px 20px;
+            margin: 0 10px;
+        } 
+
+        #placeContent #branch_north .branch_item:hover{
+            border: 1px solid #d5b36a;
+            background-color: #070f23;
+            transition: 0.5s;
+        } 
+
+        #placeContent #branch_north .branch_item h1{
+            color: #d5b36a;
+            margin: 0;
+            font-size: 16px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_north .branch_item p{
+            color: #e0d3b6;
+            margin: 10px 0;
+            font-size: 14px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_north .branch_item p:last-child{
+            color: #e0d3b6;
+            font-size: 12px;
+        } 
+
+        #placeContent #branch_north .branch_item hr{
+            color: #e0d3b6;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+        }
+
+        #placeContent #branch_north .branch_item .turnOn{
+            transform: translateY(2px);
+        } 
+
+        /* 分店詳細資訊 */
+        #placeContent #branch_north .box{
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            background-color: #070f23;
+        }
+
+        #placeContent #branch_north .box img{
+            width: 40%;
+            height: 100%;
+        }
+
+        #placeContent #branch_north .box .content{
+            width: 60%;
+            height: 100%;
+            padding: 15px 20px 0 20px; 
+            margin-left: 0;
+        }
+
+        #placeContent #branch_north .box .content .turnOff{
+            width: 18px;
+            height: 18px;
+            margin-left: 350px;    
+        }
+
+        #placeContent #branch_north .box .content p{
+            margin: 10px 0;
+            letter-spacing: 3px;
+            color: #e0d3b6;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* 資訊內容複雜之排版 */
+        #placeContent #branch_north .box2{
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            background-color: #070f23;
+        }
+
+        #placeContent #branch_north .box2 img{
+            width: 40%;
+            height: 100%;
+        }
+        #placeContent #branch_north .box2 .content{
+            width: 60%;
+            height: 100%;
+            padding: 15px 25px 0 25px; 
+            margin-left: 0;
+            line-height: 1;
+        }
+
+        #placeContent #branch_north .box2 .content .turnOff{
+            width: 18px;
+            height: 18px;
+            margin-left: 350px;    
+        }
+
+        #placeContent #branch_north .box2 .content p{
+            margin: 3px 0;
+            letter-spacing: 3px;
+            color: #e0d3b6;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* 桃竹 */
+
+        #placeContent #branch_taoyuan{
+            width: 670px;
+            height: 600px;
+            flex-wrap: wrap;
+        }
+
+        #placeContent #branch_taoyuan .branch_item{
+            width: 30%;
+            height: 200px;
+            border: 1px solid transparent;
+            padding: 25px 20px;
+            margin: 0 10px;
+        } 
+
+        #placeContent #branch_taoyuan .branch_item:hover{
+            border: 1px solid #d5b36a;
+            transition: 0.5s;
+        } 
+
+        #placeContent #branch_taoyuan .branch_item h1{
+            color: #d5b36a;
+            margin: 0;
+            font-size: 16px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_taoyuan .branch_item p{
+            color: #e0d3b6;
+            margin: 10px 0;
+            font-size: 14px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_taoyuan .branch_item p:last-child{
+            color: #e0d3b6;
+            font-size: 12px;
+        } 
+
+        #placeContent #branch_taoyuan .branch_item hr{
+            color: #e0d3b6;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+        }
+
+
+
+        /* 台中分店 */
+        #placeContent #branch_taichung{
+            width: 670px;
+            height: 600px;
+            justify-content: flex-start;
+        }
+
+        #placeContent #branch_taichung .branch_item{
+            width: 30%;
+            height: 200px;
+            border: 1px solid transparent;
+            padding: 25px 20px;
+            margin: 0 10px;
+        } 
+
+        #placeContent #branch_taichung .branch_item:hover{
+            border: 1px solid #d5b36a;
+            transition: 0.5s;
+        } 
+
+        #placeContent #branch_taichung .branch_item h1{
+            color: #d5b36a;
+            margin: 0;
+            font-size: 16px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_taichung .branch_item p{
+            color: #e0d3b6;
+            margin: 10px 0;
+            font-size: 14px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_taichung .branch_item p:last-child{
+            color: #e0d3b6;
+            font-size: 12px;
+        } 
+
+        #placeContent #branch_taichung .branch_item hr{
+            color: #e0d3b6;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+        }
+
+        /* 分店詳細資訊 */
+        #placeContent #branch_taichung .box{
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            background-color: #070f23;
+        }
+
+        #placeContent #branch_taichung .box img{
+            width: 40%;
+            height: 100%;
+        }
+
+        #placeContent #branch_taichung .box .content{
+            padding: 30px 0 0 25px; 
+            color: #e0d3b6;
+            font-size: 14px;
+        }
+
+        /* 南部分店 */
+        #placeContent #branch_south{
+            width: 670px;
+            height: 600px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        #placeContent #branch_south .branch_item{
+            width: 30%;
+            height: 200px;
+            border: 1px solid transparent;
+            padding: 25px 20px;
+            margin: 0 10px;
+        } 
+
+        #placeContent #branch_south .branch_item:hover{
+            border: 1px solid #d5b36a;
+            transition: 0.5s;
+        } 
+
+        #placeContent #branch_south .branch_item h1{
+            color: #d5b36a;
+            margin: 0;
+            font-size: 16px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_south .branch_item p{
+            color: #e0d3b6;
+            margin: 10px 0;
+            font-size: 14px;
+            letter-spacing: 3px;
+        } 
+
+        #placeContent #branch_south .branch_item p:last-child{
+            color: #e0d3b6;
+            font-size: 12px;
+        } 
+
+        #placeContent #branch_south .branch_item hr{
+            color: #e0d3b6;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(224, 211, 182, 0.4), rgba(224, 211, 182, 1), rgba(224, 211, 182, 0.4));
+        }
+
+        /* 分店詳細資訊 */
+        #placeContent #branch_south .box{
+            width: 100%;
+            height: 200px;
+            margin: 20px 0;
+            background-color: #070f23;
+        }
+
+        #placeContent #branch_south .box img{
+            width: 40%;
+            height: 100%;
+        }
+
+        #placeContent #branch_south .box .content{
+            padding: 30px 0 0 25px; 
+            color: #e0d3b6;
+            font-size: 14px;
+        }
+        
+        /* 平板pro */
+        @media (max-width :1024px){
+            
+            .swiper-button-next{
+                display: none;
+            }
+            .swiper-button-prev{
+                display: none;
+            }
+            .section888 .infoBox{
+                padding-left: 3%;
+                padding-top: 7%;
+            }
+            .section888 .infoBox2 {
+                padding-top: 7%;
+                padding-left: 0;
+            }
+            .textBox{
+                order: -1;
+            }
+            .swiper-slide{
+                width: 100%;
+            }
+            .ml-auto, .mx-auto {
+                margin-right: 5%;
+            }
+            .mr-auto, .mx-auto {
+                margin-left: 5%;
+            }
+            .logobox {
+                height: 100px;
+                width: 100px;
+            }
+            #myNavbar{
+                height: 130px;
+            }
+            .banner {
+                height: 82vh;
+            }
+            .bannerText {
+                padding: 5% 0;
+            }
+         }
+
+
+
+
+        /* 平板 */
+        @media (max-width :768px){
+            
+            #phoneNavbar .navbar-collapse {
+                margin-top: 50px;
+                height: 100vh;
+                text-align: center;
+                background-color:#0A1532;  
+            }
+            #phoneNavbar .navbar-nav{
+                margin-top: 120px;
+                text-align: center;
+            }
+            #phoneNavbar .nav-link{
+                padding: 12% 1rem;
+                font-size: 20px;
+                border: 1px solid #E0D3B6; 
+            }
+            #phoneNavbar .navbar-nav .nav-link {
+                margin-right: 5%;
+            }
+            .logobox {
+                height: 100px;
+                width: 100px;
+            }
+            #myNavbar{
+                display: none;
+            }
+            #phoneNavbar{
+                display: block;
+                height: 130px;
+            }
+            
+            
+        }
+        /* 手機板 */
+        @media (max-width :415px){
+            .footer .footer_info .col-md-4{
+                order: 1;
+                height: 35vh;
+            }
+            .footer .footer_info .col-md-2{
+                width: 50%;
+                height: 20vh;
+            }
+            .bannerText {
+                display: none;
+            }
+            #phoneNavbar .navbar-collapse {
+                height: 100vh;
+                text-align: center;
+            }
+            #phoneNavbar .navbar-nav{
+                margin-top: 120px;
+                text-align: center;
+            }
+            #phoneNavbar .nav-link{
+                padding: 12% 1rem;
+                font-size: 20px;
+                border: 1px solid #E0D3B6; 
+            }
+            .phoneText {
+                float: left;
+                color: white;
+                padding: 0 2%;
+                margin: 60% 10%;
+                text-align: center;
+                width: 80%;
+                display: block;
+            }
+            .phoneTitle{
+                font-size: 28px;
+                letter-spacing: 7px;
+            }
+            .phoneboxText{
+                text-align: center;
+                font-size: 14px;
+                
+             }
+             .phoneboxText p{
+                font-weight: 200;
+                letter-spacing: 1px;
+             }
+             .emailBox {
+                 font-size: 10px;
+             }
+           
+            .section888 {
+                height: 76vh;
+            }
+            .section888 .infoBox {
+                width: 100%;
+                font-size: 12px;
+            }
+            .section888 .infoBox2 {
+                width: 100%;
+                font-size: 12px;
+                padding: 12px;
+            }
+          
+            .swiper-pagination {
+                top: 102%;
+            }
+            .footer {
+            margin-top: 55px;
+            }
+            #myNavbar{
+                display: none;
+            }
+            #phoneNavbar{
+                display: block;
+                height: 12vh;
+            }
+            .logobox {
+                height: 60px;
+                width: 60px;
+            }
+            .banner {
+                margin-top: 0;
+                height: 100vh;
+            }
+            .bannermask{
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.4);
+                float: left;
+            }
+            .phoneText {
+                margin: -85% 10%;
+            }
+            
+        }
+
+
+    
+
+        
+           
+        </style>
+
+    <title>夏慕尼 : 新香榭鐵板燒</title>
+</head>
+
+<body>
+
+    <!-- <div class="navbar_blue"></div> -->
+
+    <!-- Navbar -->
+
+    <!-- 手機板 -->
+    <!-- 釘選直接寫在style裡面 -->
+    <nav id="phoneNavbar" class="navbar navbar-expand-lg navbar-light" style="background-color: #0A1532; position: fixed; width: 100%; top: 0;left: 0; z-index: 2;">
+        <div class="container custom-container-width">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="index.html">
+                <div class="logobox navbar-brand" href=""></div>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu/menu.html">頂級饗宴</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="announcement.html">慕語新知</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/map/map.html">夏慕之所</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">邂逅夏慕尼</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 釘選直接寫在style裡面 -->
+    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-light" style="background-color: #070f23; position: fixed; width: 100%; top: 0;left: 0; z-index: 999;">
+        <div class="container custom-container-width">
+
+            <a href="index.html">
+                <div class="logobox navbar-brand" href="#"></div>
+            </a>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/menu/menu.html">頂級饗宴</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="announcement.html">慕語新知</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/map/map.html">夏慕之所</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">邂逅夏慕尼</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="bannermask"></div>
+    <div class="phoneText">
+        <p class="phoneTitle">尋覓據點</p>
+        <hr class="style-two">
+        <div class="phoneboxText">
+            <p>顛覆傳統鐵板燒餐廳的老式印象</p>
+            <p>創新結合法式料理的細膩</p>
+            <p>與lounge bar的設計風格</p>
+            <p>營造出時尚精品店般的用餐氛圍</p>
+        </div>
+    </div>
+
+    <div class="banner" id="banner"></div>
+    <div class="bannerText">
+        <p>顛覆傳統鐵板燒餐廳的老式印象，創新結合法式料理的細膩與lounge bar</p>
+        <p>的設計風格，營造出時尚精品店般的用餐氛圍。</p>
+
+
+    </div>
+
+    <!-- 主內容區域 -->
+    <section id="placeContent">
+        <div class="container">
+
+            <div class="title">
+                <h1>全台據點</h1>
+                <hr>
+            </div>
+
+            <div class="flex">
+                <div class="map">
+
+                    <div id="map_name">
+                        <div class="map-item north map_name_onclick pointer">大台北地區</div>
+                        <div class="map-item taoyuan pointer">桃竹地區</div>
+                        <div class="map-item taichung pointer">中部地區</div>
+                        <div class="map-item south pointer">南部地區</div>
+                    </div>
+                    <div id="map">
+                        <!-- Image Map Generated by http://www.image-map.net/ -->
+                        <img id="taiwan" src="../map/img/taiwan2.png" usemap="#image-map">
+
+                        <map name="image-map">
+                            <area id="north" target="" alt="north" title="north" href="" coords="244,4,234,9,228,20,218,30,203,36,215,43,222,48,216,55,210,65,211,76,218,83,226,85,225,95,228,102,237,108,253,104,254,95,263,86,274,79,281,73,290,67,298,60,305,54,306,47,301,41,301,33,290,31,276,30,268,26,259,16,254,8,250,3,248,3"
+                                shape="poly">
+                            <area id="taoyuan" target="" alt="taoyuan" title="taoyuan" href="" coords="198,37,183,40,173,45,165,52,154,69,148,86,148,95,149,101,151,108,161,117,168,123,168,136,170,141,173,142,178,142,185,140,190,140,194,142,196,145,196,149,198,152,201,153,205,151,212,145,219,136,221,126,230,109,220,99,221,89,211,84,206,77,205,62,213,53,215,48,213,45,202,43"
+                                shape="poly">
+                            <area id="taichung" target="" alt="taichung" title="taichung" href="" coords="101,166,92,169,86,176,75,189,75,192,76,196,84,206,91,215,100,223,109,229,115,230,119,229,129,216,134,214,140,213,151,212,157,211,163,207,170,202,209,193,212,195,216,194,219,192,226,180,224,173,221,170,212,168,206,164,203,163,200,164,178,178,174,180,170,181,154,180,150,180,143,186,134,184,125,181,119,177,110,170,105,167,103,167,102,166,102,167"
+                                shape="poly">
+                            <area id="south" target="" alt="south" title="south" href="" coords="18,349,12,376,11,381,9,384,2,390,2,393,4,396,19,407,23,411,26,417,30,433,31,437,40,452,40,455,40,469,41,472,42,474,48,482,58,494,62,497,88,514,92,517,102,536,112,554,113,581,113,588,117,592,124,591,133,597,128,584,133,582,139,577,140,566,137,552,132,542,127,536,118,515,118,502,118,496,117,488,118,476,125,465,135,459,140,453,143,445,134,429,134,411,142,396,144,389,143,379,144,373,163,358,168,355,167,353,164,350,163,348,156,343,155,342,156,338,153,338,148,336,145,335,144,335,132,348,106,371,104,372,81,378,80,370,81,359,84,351,83,349,70,344,65,343,70,344,65,343,37,353,32,354,28,354,22,351,24,352"
+                                shape="poly">
+                        </map>
+
+                        <img class="taiwan_part northpic pointer onclick" src="../map/img/north.png" alt="">
+                        <img class="taiwan_part taoyuanpic pointer" src="../map/img/taoyuan.png" alt="">
+                        <img class="taiwan_part taichungpic pointer" src="../map/img/taichung.png" alt="">
+                        <img class="taiwan_part southpic pointer" src="../map/img/south.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- 台北分店 -->
+                    <div id="branch_north" class="flex">
+                        <div id="north1" class="branch_item pointer">
+                            <h1>台北南昌店</h1>
+                            <p>02-2368-0613</p>
+                            <p>台北市中正區南昌路</p>
+                            <p>二段112號2樓</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="north_turn_on1" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div id="north2" class="branch_item pointer">
+                            <h1>台北中山店</h1>
+                            <p>02-2571-9608</p>
+                            <p>台北市中山區中山</p>
+                            <p>北路二段44號B1</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="north_turn_on2" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div id="north3" class="branch_item pointer">
+                            <h1>台北忠孝東店</h1>
+                            <p>02-2776-6877</p>
+                            <p>台北市大安區忠孝</p>
+                            <p>東路四段333號2樓</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="north_turn_on3" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div id="north1_box" class="box hiden">
+                            <img src="../map/img/banner.jpg" alt="示意圖">
+                            <div class="content">
+                                <img id="north_turn_off1" class="turnOff pointer" src="../map/img/turnoff.png" alt="關閉按鈕">
+                                <p>♪12月上旬 新裝登場 敬邀嚐鮮</p>
+                                <p>交通資訊：<br>公車/南昌公園 捷運/古亭站2號出口</p>
+                                <p>午間：11:30 - 14:30 (最後點餐時間14:00) <br> 晚間：17:30 - 22:00 (最後點餐時間21:00)</p>
+                            </div>
+                        </div>
+                        <div id="north2_box" class="box2 hiden">
+                            <img src="../map/img/banner2.jpg" alt="示意圖">
+                            <div class="content">
+                                <img id="north_turn_off2" class="turnOff pointer" src="../map/img/turnoff.png" alt="關閉按鈕">
+                                <p>消費套餐，可享【台壽金融總部大樓停車場、中山運動中心停車場、翔浩泊車網-優惠停車場】前2小時免費停車。</p>
+                                <p>交通資訊：<br>公車/國賓飯店 捷運/中山站3號出口</p>
+                                <p>午間：11:30 - 14:30 (最後點餐時間14:00) <br> 晚間：17:30 - 22:00 (最後點餐時間21:00)</p>
+                            </div>
+                        </div>
+                        <div id="north3_box" class="box hiden">
+                            <img src="../map/img/banner.jpg" alt="示意圖">
+                            <div class="content">
+                                <img id="north_turn_off3" class="turnOff pointer" src="../map/img/turnoff.png" alt="關閉按鈕">
+                                <p></p>
+                                <p>交通資訊：<br>距離捷運國父紀念館1號站出口，往忠孝東路四段，左轉往光復南路方向。</p>
+                                <p>午間：11:30 - 14:30 (最後點餐時間14:00) <br> 晚間：17:30 - 22:00 (最後點餐時間21:00)</p>
+                            </div>
+                        </div>
+                        <div id="north4" class="branch_item pointer">
+                            <h1>台北內湖店</h1>
+                            <p>02-2793-2363</p>
+                            <p>台北市內湖區舊宗路</p>
+                            <p>一段150巷25號2樓</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="north_turn_on4" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div id="north5" class="branch_item pointer">
+                            <h1>板橋民生店</h1>
+                            <p>02-2250-9169</p>
+                            <p>新北市板橋區民生路</p>
+                            <p>二段231號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="north_turn_on5" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 桃園分店 -->
+                    <div id="branch_taoyuan" class="hiden pointer">
+                        <div class="branch_item">
+                            <h1>桃園中山東店</h1>
+                            <p>03-338-3557</p>
+                            <p>桃園市桃園區</p>
+                            <p>中山東路51號2樓</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="taoyuan_turn_on1" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div class="branch_item pointer">
+                            <h1>中壢延平店</h1>
+                            <p>03-427-0907</p>
+                            <p>桃園市平鎮區</p>
+                            <p>延平路一段2號2樓</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="taoyuan_turn_on2" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div class="branch_item pointer">
+                            <h1>竹北光明店</h1>
+                            <p>03-657-0648</p>
+                            <p>新竹縣竹北市</p>
+                            <p>光明一路128號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="taoyuan_turn_on3" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 台中分店 -->
+                    <div id="branch_taichung" class="hiden pointer">
+                        <div class="branch_item">
+                            <h1>台中大隆店</h1>
+                            <p>04-2328-2918</p>
+                            <p>台中市西區大隆路</p>
+                            <p>43號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="taichung_turn_on1" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div class="branch_item pointer">
+                            <h1>台中文心店</h1>
+                            <p>04-2315-2268</p>
+                            <p>台中市西屯區文心路</p>
+                            <p>三段506號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="taichung_turn_on2" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- 南部分店 -->
+                    <div id="branch_south" class="hiden pointer">
+                        <div class="branch_item">
+                            <h1>台南公園南店</h1>
+                            <p>06-220-1698</p>
+                            <p>台南市北區</p>
+                            <p>公園南路379號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="south_turn_on1" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div class="branch_item pointer">
+                            <h1>台南永華店</h1>
+                            <p>06-295-0707</p>
+                            <p>臺南市安平區永華路</p>
+                            <p>二段129號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="south_turn_on2" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+                        <div class="branch_item pointer">
+                            <h1>高雄五福店</h1>
+                            <p>07-221-8169</p>
+                            <p>高雄市前金區</p>
+                            <p>五福三路29號</p>
+                            <hr>
+                            <p>詳細資訊
+                                <img id="south_turn_on3" class="turnOn" src="../map/img/turnon.png" alt="打開按鈕">
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="50000" class="section888" id="section888">
+        <div class="box666">
+            <div id="closebtn" class="closebtn">x</div>
+
+            <div class="infoBox">
+                <p>如果您有任何意見，歡迎與我們聯絡</p>
+                <p>
+                    <span>免付費意見專線 : 0800-365-101</span>
+                    <br><span>服務信箱 : service@chamonix.com.tw</span>
+                    <br><span class="A">服務時間 : 平日週一至週五10:00~19:00</span>
+                </p>
+                <span class="B">※訂位請撥各店電話</span>
+            </div>
+            <div class="infoBox2">
+                <p>
+                    <span> 禮贈品供應、異業優惠合作等，歡迎聯絡</span>
+                    <br><span> email : marketing@chamonix.com.tw</span>
+                </p>
+                <p class="mailText">
+                    <span> 食材/非食材訊息提供，歡迎聯絡</span>
+                    <br> <span> email : purchase@wowprime.com</span>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row footer_info">
+                <!-- flex-column 橫式轉直，讓第2個span掉下來-->
+                <div class="col-md-2 flex-column" onclick="window.open('http://partner.eztable.com/chamonix')">
+                    <span>EZTABLE</span>
+                    <span>線上訂位</span>
+                </div>
+                <div class="col-md-2" onclick="window.open('http://wowfoods.wowprime.com/front/web/index.do')">
+                    <br>
+                    <span>瘋美食APP</span>
+                    <br>
+                </div>
+                <div class="col-md-4 openTime">
+                    <div class="textBox">
+                        <p>營業時間</p>
+                        <p>11:30 - 14:30 (最後用餐時間14:00) </p>
+                        <p>17:30 - 22:00 (最後用餐時間21:00)</p>
+                    </div>
+
+                </div>
+                <div class="col-md-2" onclick="window.open('https://www.facebook.com/chamonix.com.tw/?eid=ARCT0i-PEQFKyLaMF3fNU_DEMiiuKbLrK0AWjigVxye9zKTG6GGKMEHABIuDizBF--LjRfVU8HqGzre4')">
+                    <br>
+                    <span> FB粉絲團</span>
+                    <br>
+                </div>
+                <!-- <div class="col-md-2" data-toggle="collapse" data-target="#collapseExample"> -->
+                <div id="callme" class="col-md-2" data-target="#section888">
+                    <br>
+                    <!-- <span>聯絡我們</span> -->
+                    <a href="#section888">聯絡我們</a>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row emailBox">
+                <div class="col">
+                    <p>本網站僅為學術用途，如有侵權請來信告知chamonixweb@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- 載入Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+    <script>
+        AOS.init();
+
+        window.addEventListener('wheel', function (e) {
+            // 滑鼠上滾
+            // 往上滑可以直接關閉聯絡我們視窗
+            if (e.deltaY < 0) {
+                $('#section888').addClass('boxhid');
+            }
+
+            // // 滑鼠下滾
+            // // 往下滾動NAVBAR背景色換色
+            // if (e.deltaY > 0) {
+            //     $(".navbar_blue").addClass('changeBGcolor');
+            // }
+        });
+
+
+        $("#callme").click(function () {
+
+            $('#section888').addClass('boxSh');
+            $('#section888').removeClass('boxhid');
+        });
+
+
+        $("#closebtn").click(function () {
+
+            $('#section888').addClass('boxhid');
+            $('#section888').removeClass('boxSh');
+        });
+
+
+
+        // 點連結緩慢移到定位
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+        // 改善手機介面上滑
+
+
+        //滑動起點與終點
+        var startY = 0;
+        var endY = 0;
+
+
+        //監聽window的觸控事件 
+
+        //touchstart:手指接觸螢幕的瞬間
+        window.addEventListener('touchstart', function (event) {
+
+            var touch = event.targetTouches[0];
+            //紀錄觸控起始點
+            startY = touch.pageY;
+            console.log("起始點:" + startY);
+
+        }, false)
+
+        //touchmove:手指點下去後移動的時候
+        window.addEventListener('touchmove', function (event) {
+
+            var touch = event.targetTouches[0];
+            //紀錄觸控起終點
+            endY = touch.pageY;
+            console.log("滑動距離:" + endY);
+
+        }, false)
+
+        //touchend:手指離開螢幕的瞬間
+        window.addEventListener('touchend', function (event) {
+
+            //終點 - 起點 = 距離   < 10 = 向上滑動如果大於10單位
+            if (endY - startY < 10) {
+
+                console.log("偵測到向上滑動");
+
+                //do something
+
+            } else if (endY - startY > 5) {
+
+                console.log("偵測到向下滑動");
+
+                //do something
+                $('#section888').addClass('boxhid');
+            }
+        }, false)
+
+
+        // 地圖效果--------------------------------------------------------------------------------------
+
+        const north1_box = document.querySelector("#north1_box");
+        // const north1_on = document.querySelector("#north1_on");
+        const north_turn_off1 = document.querySelector("#north_turn_off1");
+
+        const north2_box = document.querySelector("#north2_box");
+        const north_turn_off2 = document.querySelector("#north_turn_off2");
+
+        const north3_box = document.querySelector("#north3_box");
+
+        const north1 = document.querySelector("#north1");
+        const north2 = document.querySelector("#north2");
+        const north3 = document.querySelector("#north3");
+        const north4 = document.querySelector("#north4");
+        const north5 = document.querySelector("#north5");
+
+
+        north1.onclick = function () {
+            north1_box.classList.add('show');
+            north1_box.classList.remove('hiden');
+            north2_box.classList.add('hiden');
+            north3_box.classList.add('hiden');
+        }
+
+        north_turn_off1.onclick = function () {
+            north1_box.classList.remove('show');
+            north1_box.classList.add('hiden');
+            north2_box.classList.add('hiden');
+            north3_box.classList.add('hiden');
+        }
+
+        north2.onclick = function () {
+            north2_box.classList.add('show');
+            north2_box.classList.remove('hiden');
+            north1_box.classList.add('hiden');
+            north3_box.classList.add('hiden');
+        }
+
+        north_turn_off2.onclick = function () {
+            north2_box.classList.remove('show');
+            north2_box.classList.add('hiden');
+            north1_box.classList.add('hiden');
+            north3_box.classList.add('hiden');
+        }
+
+        north3.onclick = function () {
+            north3_box.classList.add('show');
+            north3_box.classList.remove('hiden');
+            north1_box.classList.add('hiden');
+            north2_box.classList.add('hiden');
+        }
+        const north = document.querySelector(".northpic");
+        const taoyuan = document.querySelector(".taoyuanpic");
+        const taichung = document.querySelector(".taichungpic");
+        const south = document.querySelector(".southpic");
+
+        const northName = document.querySelector(".north");
+        const taoyuanName = document.querySelector(".taoyuan");
+        const taichungName = document.querySelector(".taichung");
+        const southName = document.querySelector(".south");
+
+        const branch_north = document.querySelector("#branch_north");
+        const branch_taoyuan = document.querySelector("#branch_taoyuan");
+        const branch_taichung = document.querySelector("#branch_taichung");
+        const branch_south = document.querySelector("#branch_south");
+
+        // 名字區域的效果
+        northName.onclick = function () {
+            north.classList.add('onclick');
+            taoyuan.classList.remove('onclick');
+            taichung.classList.remove('onclick');
+            south.classList.remove('onclick');
+
+            northName.classList.add('map_name_onclick');
+            taoyuanName.classList.remove('map_name_onclick');
+            taichungName.classList.remove('map_name_onclick');
+            southName.classList.remove('map_name_onclick');
+
+            branch_north.classList.add('show');
+            branch_north.classList.remove('hiden');
+            branch_taoyuan.classList.add('hiden');
+            branch_taichung.classList.add('hiden');
+            branch_south.classList.add('hiden');
+            // branch_north.style.display='block';
+            // branch_taoyuan.style.display='none';
+        }
+
+        taoyuanName.onclick = function () {
+            taoyuan.classList.add('onclick');
+            north.classList.remove('onclick');
+            taichung.classList.remove('onclick');
+            south.classList.remove('onclick');
+
+            taoyuanName.classList.add('map_name_onclick');
+            northName.classList.remove('map_name_onclick');
+            taichungName.classList.remove('map_name_onclick');
+            southName.classList.remove('map_name_onclick');
+
+            branch_taoyuan.classList.add('show');
+            branch_taoyuan.classList.remove('hiden');
+            branch_north.classList.add('hiden');
+            branch_taichung.classList.add('hiden');
+            branch_south.classList.add('hiden');
+            // branch_taoyuan.style.display='block';
+            // branch_north.style.display='none';
+        }
+
+        taichungName.onclick = function () {
+            taichung.classList.add('onclick');
+            north.classList.remove('onclick');
+            taoyuan.classList.remove('onclick');
+            south.classList.remove('onclick');
+            taichungName.classList.add('map_name_onclick');
+            northName.classList.remove('map_name_onclick');
+            taoyuanName.classList.remove('map_name_onclick');
+            southName.classList.remove('map_name_onclick');
+
+            branch_taichung.classList.add('show');
+            branch_taichung.classList.remove('hiden');
+            branch_north.classList.add('hiden');
+            branch_taoyuan.classList.add('hiden');
+            branch_south.classList.add('hiden');
+        }
+
+        southName.onclick = function () {
+            south.classList.add('onclick');
+            north.classList.remove('onclick');
+            taoyuan.classList.remove('onclick');
+            taichung.classList.remove('onclick');
+            southName.classList.add('map_name_onclick');
+            taichungName.classList.remove('map_name_onclick');
+            northName.classList.remove('map_name_onclick');
+            taoyuanName.classList.remove('map_name_onclick');
+
+            branch_south.classList.add('show');
+            branch_south.classList.remove('hiden');
+            branch_north.classList.add('hiden');
+            branch_taoyuan.classList.add('hiden');
+            branch_taichung.classList.add('hiden');
+        }
+
+        northName.onmouseenter = function () {
+            north.classList.add('taiwan_part_hover');
+            northName.classList.add('map_name_hover');
+        }
+        northName.onmouseleave = function () {
+            north.classList.remove('taiwan_part_hover');
+            northName.classList.remove('map_name_hover');
+        }
+
+        taoyuanName.onmouseenter = function () {
+            taoyuan.classList.add('taiwan_part_hover');
+            taoyuanName.classList.add('map_name_hover');
+        }
+        taoyuanName.onmouseleave = function () {
+            taoyuan.classList.remove('taiwan_part_hover');
+            taoyuanName.classList.remove('map_name_hover');
+        }
+
+        taichungName.onmouseenter = function () {
+            taichung.classList.add('taiwan_part_hover');
+            taichungName.classList.add('map_name_hover');
+        }
+        taichungName.onmouseleave = function () {
+            taichung.classList.remove('taiwan_part_hover');
+            taichungName.classList.remove('map_name_hover');
+        }
+
+        southName.onmouseenter = function () {
+            south.classList.add('taiwan_part_hover');
+            southName.classList.add('map_name_hover');
+        }
+        southName.onmouseleave = function () {
+            south.classList.remove('taiwan_part_hover');
+            southName.classList.remove('map_name_hover');
+        }
+
+        // 區塊的效果
+        north.onclick = function () {
+            north.classList.add('onclick');
+            taoyuan.classList.remove('onclick');
+            taichung.classList.remove('onclick');
+            south.classList.remove('onclick');
+
+            northName.classList.add('map_name_onclick');
+            taoyuanName.classList.remove('map_name_onclick');
+            taichungName.classList.remove('map_name_onclick');
+            southName.classList.remove('map_name_onclick');
+
+            branch_north.classList.add('show');
+            branch_north.classList.remove('hiden');
+            branch_taoyuan.classList.add('hiden');
+            branch_taichung.classList.add('hiden');
+            branch_south.classList.add('hiden');
+        }
+
+        taoyuan.onclick = function () {
+            taoyuan.classList.add('onclick');
+            north.classList.remove('onclick');
+            taichung.classList.remove('onclick');
+            south.classList.remove('onclick');
+
+            taoyuanName.classList.add('map_name_onclick');
+            northName.classList.remove('map_name_onclick');
+            taichungName.classList.remove('map_name_onclick');
+            southName.classList.remove('map_name_onclick');
+
+            branch_taoyuan.classList.add('show');
+            branch_taoyuan.classList.remove('hiden');
+            branch_north.classList.add('hiden');
+            branch_taichung.classList.add('hiden');
+            branch_south.classList.add('hiden');
+        }
+
+        taichung.onclick = function () {
+            taichung.classList.add('onclick');
+            north.classList.remove('onclick');
+            taoyuan.classList.remove('onclick');
+            south.classList.remove('onclick');
+            taichungName.classList.add('map_name_onclick');
+            northName.classList.remove('map_name_onclick');
+            taoyuanName.classList.remove('map_name_onclick');
+            southName.classList.remove('map_name_onclick');
+
+            branch_taichung.classList.add('show');
+            branch_taichung.classList.remove('hiden');
+            branch_north.classList.add('hiden');
+            branch_taoyuan.classList.add('hiden');
+            branch_south.classList.add('hiden');
+        }
+
+        south.onclick = function () {
+            south.classList.add('onclick');
+            north.classList.remove('onclick');
+            taoyuan.classList.remove('onclick');
+            taichung.classList.remove('onclick');
+            southName.classList.add('map_name_onclick');
+            taichungName.classList.remove('map_name_onclick');
+            northName.classList.remove('map_name_onclick');
+            taoyuanName.classList.remove('map_name_onclick');
+
+            branch_south.classList.add('show');
+            branch_south.classList.remove('hiden');
+            branch_north.classList.add('hiden');
+            branch_taoyuan.classList.add('hiden');
+            branch_taichung.classList.add('hiden');
+        }
+
+        north.onmouseenter = function () {
+            north.classList.add('taiwan_part_hover');
+            northName.classList.add('map_name_hover');
+        }
+        north.onmouseleave = function () {
+            north.classList.remove('taiwan_part_hover');
+            northName.classList.remove('map_name_hover');
+        }
+
+        taoyuan.onmouseenter = function () {
+            taoyuan.classList.add('taiwan_part_hover');
+            taoyuanName.classList.add('map_name_hover');
+        }
+        taoyuan.onmouseleave = function () {
+            taoyuan.classList.remove('taiwan_part_hover');
+            taoyuanName.classList.remove('map_name_hover');
+        }
+
+        taichung.onmouseenter = function () {
+            taichung.classList.add('taiwan_part_hover');
+            taichungName.classList.add('map_name_hover');
+        }
+        taichung.onmouseleave = function () {
+            taichung.classList.remove('taiwan_part_hover');
+            taichungName.classList.remove('map_name_hover');
+        }
+
+        south.onmouseenter = function () {
+            south.classList.add('taiwan_part_hover');
+            southName.classList.add('map_name_hover');
+        }
+        south.onmouseleave = function () {
+            south.classList.remove('taiwan_part_hover');
+            southName.classList.remove('map_name_hover');
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
